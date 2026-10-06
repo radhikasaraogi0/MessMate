@@ -86,7 +86,7 @@ flowchart TD
         FeedbackCol[("Feedback Collection\n(Ratings, Issues, Comments)")]
         Controllers -->|Mongoose Queries & Aggregations| UserCol
         Controllers -->|CRUD Operations| MealCol
-        Controllers -->|Aggregation Pipelines (group, unwind)| FeedbackCol
+        Controllers -->|Aggregation Pipelines | FeedbackCol
     end
 ```
 
