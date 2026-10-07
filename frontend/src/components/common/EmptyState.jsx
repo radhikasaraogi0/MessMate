@@ -16,9 +16,9 @@ export const EmptyState = ({
         justifyContent: 'center',
         padding: '48px 24px',
         textAlign: 'center',
-        backgroundColor: '#ffffff',
+        backgroundColor: '#181a20',
         borderRadius: '16px',
-        border: '1px dashed #cbd5e1',
+        border: '1px dashed #262933',
         margin: '16px 0',
       }}
     >
@@ -27,8 +27,8 @@ export const EmptyState = ({
           width: '56px',
           height: '56px',
           borderRadius: '50%',
-          backgroundColor: '#ffedd5',
-          color: '#ea580c',
+          backgroundColor: '#262315',
+          color: '#fef08a',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -41,7 +41,7 @@ export const EmptyState = ({
         style={{
           fontSize: '1.125rem',
           fontWeight: '700',
-          color: '#1e293b',
+          color: '#f8fafc',
           margin: '0 0 8px 0',
         }}
       >
@@ -50,7 +50,7 @@ export const EmptyState = ({
       <p
         style={{
           fontSize: '0.9rem',
-          color: '#64748b',
+          color: '#94a3b8',
           maxWidth: '400px',
           margin: '0 0 20px 0',
           lineHeight: '1.5',

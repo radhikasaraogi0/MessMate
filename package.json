@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "HostelBites – College Hostel Mess Feedback & Management System",
   "scripts": {
-    "install:all": "npm install --prefix server && npm install --prefix client",
-    "seed": "npm run --prefix server seed",
-    "server": "npm start --prefix server",
-    "server:dev": "npm run dev --prefix server",
-    "client": "npm run dev --prefix client",
-    "build": "npm run build --prefix client"
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "seed": "npm run --prefix backend seed",
+    "backend": "npm start --prefix backend",
+    "backend:dev": "npm run dev --prefix backend",
+    "frontend": "npm run dev --prefix frontend",
+    "server": "npm start --prefix backend",
+    "server:dev": "npm run dev --prefix backend",
+    "client": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend"
   },
   "keywords": [
     "hostel",

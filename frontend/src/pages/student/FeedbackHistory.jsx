@@ -160,13 +160,13 @@ export const FeedbackHistory = () => {
             fontFamily: "'Outfit', sans-serif",
             fontSize: '1.85rem',
             fontWeight: '800',
-            color: '#0f172a',
+            color: '#f8fafc',
             margin: '0 0 6px 0',
           }}
         >
           My Feedback History
         </h1>
-        <p style={{ margin: 0, color: '#64748b', fontSize: '0.925rem' }}>
+        <p style={{ margin: 0, color: '#94a3b8', fontSize: '0.925rem' }}>
           Inspect your past ratings, update recent comments, or verify problem resolutions
         </p>
       </div>
@@ -183,35 +183,35 @@ export const FeedbackHistory = () => {
             gap: '16px',
           }}
         >
-          <div style={{ backgroundColor: '#ffffff', padding: '16px 20px', borderRadius: '14px', border: '1px solid #e2e8f0' }}>
-            <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#64748b', textTransform: 'uppercase' }}>
+          <div style={{ backgroundColor: '#181a20', padding: '16px 20px', borderRadius: '14px', border: '1px solid #262933' }}>
+            <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase' }}>
               Total Reviews
             </span>
-            <div style={{ fontSize: '1.5rem', fontWeight: '800', color: '#0f172a' }}>
+            <div style={{ fontSize: '1.5rem', fontWeight: '800', color: '#f8fafc', marginTop: '4px' }}>
               {summary.totalSubmissions}
             </div>
           </div>
-          <div style={{ backgroundColor: '#ffffff', padding: '16px 20px', borderRadius: '14px', border: '1px solid #e2e8f0' }}>
-            <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#64748b', textTransform: 'uppercase' }}>
+          <div style={{ backgroundColor: '#181a20', padding: '16px 20px', borderRadius: '14px', border: '1px solid #262933' }}>
+            <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase' }}>
               Avg Overall
             </span>
-            <div style={{ fontSize: '1.5rem', fontWeight: '800', color: '#ea580c' }}>
+            <div style={{ fontSize: '1.5rem', fontWeight: '800', color: '#fef08a', marginTop: '4px' }}>
               {summary.avgRating} ⭐
             </div>
           </div>
-          <div style={{ backgroundColor: '#ffffff', padding: '16px 20px', borderRadius: '14px', border: '1px solid #e2e8f0' }}>
-            <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#64748b', textTransform: 'uppercase' }}>
+          <div style={{ backgroundColor: '#181a20', padding: '16px 20px', borderRadius: '14px', border: '1px solid #262933' }}>
+            <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase' }}>
               Taste Avg
             </span>
-            <div style={{ fontSize: '1.5rem', fontWeight: '800', color: '#0f172a' }}>
+            <div style={{ fontSize: '1.5rem', fontWeight: '800', color: '#c4b5fd', marginTop: '4px' }}>
               {summary.avgTaste}
             </div>
           </div>
-          <div style={{ backgroundColor: '#ffffff', padding: '16px 20px', borderRadius: '14px', border: '1px solid #e2e8f0' }}>
-            <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#64748b', textTransform: 'uppercase' }}>
+          <div style={{ backgroundColor: '#181a20', padding: '16px 20px', borderRadius: '14px', border: '1px solid #262933' }}>
+            <span style={{ fontSize: '0.75rem', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase' }}>
               Hygiene Avg
             </span>
-            <div style={{ fontSize: '1.5rem', fontWeight: '800', color: '#0f172a' }}>
+            <div style={{ fontSize: '1.5rem', fontWeight: '800', color: '#bbf7d0', marginTop: '4px' }}>
               {summary.avgHygiene}
             </div>
           </div>
@@ -221,17 +221,17 @@ export const FeedbackHistory = () => {
       {/* Filter Control Bar */}
       <div
         style={{
-          backgroundColor: '#ffffff',
+          backgroundColor: '#181a20',
           borderRadius: '16px',
           padding: '16px 20px',
-          border: '1px solid #e2e8f0',
+          border: '1px solid #262933',
           display: 'flex',
           flexWrap: 'wrap',
           alignItems: 'center',
           gap: '14px',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#64748b', fontWeight: '700', fontSize: '0.85rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#94a3b8', fontWeight: '700', fontSize: '0.85rem' }}>
           <Filter size={16} />
           <span>Filters:</span>
         </div>
@@ -245,7 +245,9 @@ export const FeedbackHistory = () => {
             style={{
               padding: '8px 12px',
               borderRadius: '8px',
-              border: '1px solid #cbd5e1',
+              border: '1px solid #2a2e39',
+              backgroundColor: '#131418',
+              color: '#f8fafc',
               fontSize: '0.85rem',
               outline: 'none',
             }}
@@ -260,10 +262,11 @@ export const FeedbackHistory = () => {
             style={{
               padding: '8px 12px',
               borderRadius: '8px',
-              border: '1px solid #cbd5e1',
+              border: '1px solid #2a2e39',
               fontSize: '0.85rem',
               outline: 'none',
-              backgroundColor: '#ffffff',
+              backgroundColor: '#131418',
+              color: '#f8fafc',
             }}
           >
             <option value="">All Meals</option>
@@ -282,10 +285,11 @@ export const FeedbackHistory = () => {
             style={{
               padding: '8px 12px',
               borderRadius: '8px',
-              border: '1px solid #cbd5e1',
+              border: '1px solid #2a2e39',
               fontSize: '0.85rem',
               outline: 'none',
-              backgroundColor: '#ffffff',
+              backgroundColor: '#131418',
+              color: '#f8fafc',
             }}
           >
             <option value="">All Ratings</option>
@@ -307,9 +311,9 @@ export const FeedbackHistory = () => {
               gap: '4px',
               background: 'none',
               border: 'none',
-              color: '#ea580c',
+              color: '#fef08a',
               fontSize: '0.85rem',
-              fontWeight: '600',
+              fontWeight: '700',
               cursor: 'pointer',
               marginLeft: 'auto',
             }}
@@ -335,17 +339,17 @@ export const FeedbackHistory = () => {
       ) : (
         <div
           style={{
-            backgroundColor: '#ffffff',
+            backgroundColor: '#181a20',
             borderRadius: '16px',
-            border: '1px solid #e2e8f0',
+            border: '1px solid #262933',
             overflow: 'hidden',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
+            boxShadow: '0 4px 20px -2px rgba(0, 0, 0, 0.3)',
           }}
         >
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.875rem' }}>
               <thead>
-                <tr style={{ backgroundColor: '#f8fafc', borderBottom: '1px solid #e2e8f0', color: '#475569', fontWeight: '700' }}>
+                <tr style={{ backgroundColor: '#14151a', borderBottom: '1px solid #262933', color: '#94a3b8', fontWeight: '700' }}>
                   <th style={{ padding: '14px 20px' }}>Date</th>
                   <th style={{ padding: '14px 20px' }}>Meal</th>
                   <th style={{ padding: '14px 20px' }}>Rating</th>
@@ -360,10 +364,10 @@ export const FeedbackHistory = () => {
                   <tr
                     key={item._id}
                     style={{
-                      borderBottom: idx < history.length - 1 ? '1px solid #f1f5f9' : 'none',
+                      borderBottom: idx < history.length - 1 ? '1px solid #22252e' : 'none',
                     }}
                   >
-                    <td style={{ padding: '16px 20px', fontWeight: '600', color: '#0f172a', whiteSpace: 'nowrap' }}>
+                    <td style={{ padding: '16px 20px', fontWeight: '600', color: '#f8fafc', whiteSpace: 'nowrap' }}>
                       {item.date}
                     </td>
                     <td style={{ padding: '16px 20px' }}>
@@ -374,11 +378,11 @@ export const FeedbackHistory = () => {
                     <td style={{ padding: '16px 20px' }}>
                       <StarRating rating={item.averageRating} size={15} showLabel={true} />
                     </td>
-                    <td style={{ padding: '16px 20px', fontSize: '0.78rem', color: '#64748b', lineHeight: 1.4 }}>
-                      <div>Taste: <strong>{item.tasteRating}★</strong></div>
-                      <div>Quality: <strong>{item.qualityRating}★</strong></div>
-                      <div>Hygiene: <strong>{item.hygieneRating}★</strong></div>
-                      <div>Quantity: <strong>{item.quantityRating}★</strong></div>
+                    <td style={{ padding: '16px 20px', fontSize: '0.78rem', color: '#94a3b8', lineHeight: 1.4 }}>
+                      <div>Taste: <strong style={{ color: '#f8fafc' }}>{item.tasteRating}★</strong></div>
+                      <div>Quality: <strong style={{ color: '#f8fafc' }}>{item.qualityRating}★</strong></div>
+                      <div>Hygiene: <strong style={{ color: '#f8fafc' }}>{item.hygieneRating}★</strong></div>
+                      <div>Quantity: <strong style={{ color: '#f8fafc' }}>{item.quantityRating}★</strong></div>
                     </td>
                     <td style={{ padding: '16px 20px' }}>
                       {item.issues && item.issues.length > 0 && item.issues[0] !== 'No issue' ? (
@@ -389,10 +393,11 @@ export const FeedbackHistory = () => {
                               style={{
                                 padding: '2px 8px',
                                 borderRadius: '4px',
-                                backgroundColor: '#fee2e2',
-                                color: '#b91c1c',
+                                backgroundColor: '#2d1519',
+                                border: '1px solid #5c1d24',
+                                color: '#fca5a5',
                                 fontSize: '0.72rem',
-                                fontWeight: '600',
+                                fontWeight: '700',
                               }}
                             >
                               {iss}
@@ -400,13 +405,13 @@ export const FeedbackHistory = () => {
                           ))}
                         </div>
                       ) : (
-                        <span style={{ fontSize: '0.75rem', color: '#16a34a', fontWeight: '600' }}>
+                        <span style={{ fontSize: '0.75rem', color: '#86efac', fontWeight: '600' }}>
                           No issues
                         </span>
                       )}
                     </td>
-                    <td style={{ padding: '16px 20px', color: '#334155', maxWidth: '240px' }}>
-                      {item.comment ? `"${item.comment}"` : <span style={{ color: '#94a3b8', fontStyle: 'italic' }}>None</span>}
+                    <td style={{ padding: '16px 20px', color: '#cbd5e1', maxWidth: '240px' }}>
+                      {item.comment ? `"${item.comment}"` : <span style={{ color: '#64748b', fontStyle: 'italic' }}>None</span>}
                     </td>
                     <td style={{ padding: '16px 20px', textAlign: 'right', whiteSpace: 'nowrap' }}>
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '8px' }}>
@@ -416,9 +421,9 @@ export const FeedbackHistory = () => {
                           style={{
                             padding: '6px',
                             borderRadius: '6px',
-                            border: '1px solid #cbd5e1',
-                            backgroundColor: '#ffffff',
-                            color: '#0284c7',
+                            border: '1px solid #2e3547',
+                            backgroundColor: '#1f232d',
+                            color: '#7dd3fc',
                             cursor: 'pointer',
                           }}
                           title="Edit feedback"
@@ -431,9 +436,9 @@ export const FeedbackHistory = () => {
                           style={{
                             padding: '6px',
                             borderRadius: '6px',
-                            border: '1px solid #fecaca',
-                            backgroundColor: '#fff1f2',
-                            color: '#e11d48',
+                            border: '1px solid #5c1d24',
+                            backgroundColor: '#2b171a',
+                            color: '#fca5a5',
                             cursor: 'pointer',
                           }}
                           title="Delete feedback"
@@ -460,25 +465,25 @@ export const FeedbackHistory = () => {
           <form onSubmit={handleSaveEdit} style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', marginBottom: '4px' }}>
+                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#f8fafc', marginBottom: '4px' }}>
                   Taste ({editTaste}/5)
                 </label>
                 <StarRating rating={editTaste} interactive={true} onChange={setEditTaste} size={22} />
               </div>
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', marginBottom: '4px' }}>
+                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#f8fafc', marginBottom: '4px' }}>
                   Quality ({editQuality}/5)
                 </label>
                 <StarRating rating={editQuality} interactive={true} onChange={setEditQuality} size={22} />
               </div>
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', marginBottom: '4px' }}>
+                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#f8fafc', marginBottom: '4px' }}>
                   Hygiene ({editHygiene}/5)
                 </label>
                 <StarRating rating={editHygiene} interactive={true} onChange={setEditHygiene} size={22} />
               </div>
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', marginBottom: '4px' }}>
+                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#f8fafc', marginBottom: '4px' }}>
                   Quantity ({editQuantity}/5)
                 </label>
                 <StarRating rating={editQuantity} interactive={true} onChange={setEditQuantity} size={22} />
@@ -486,7 +491,7 @@ export const FeedbackHistory = () => {
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', marginBottom: '6px' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#f8fafc', marginBottom: '6px' }}>
                 Issues:
               </label>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
@@ -500,9 +505,9 @@ export const FeedbackHistory = () => {
                       style={{
                         padding: '4px 10px',
                         borderRadius: '6px',
-                        border: `1px solid ${active ? '#ea580c' : '#cbd5e1'}`,
-                        backgroundColor: active ? '#fff7ed' : '#ffffff',
-                        color: active ? '#c2410c' : '#475569',
+                        border: `1px solid ${active ? '#fef08a' : '#2a2e39'}`,
+                        backgroundColor: active ? '#2c2817' : '#131418',
+                        color: active ? '#fef08a' : '#94a3b8',
                         fontSize: '0.8rem',
                         cursor: 'pointer',
                         fontWeight: active ? '700' : '500',
@@ -516,7 +521,7 @@ export const FeedbackHistory = () => {
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', marginBottom: '6px' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#f8fafc', marginBottom: '6px' }}>
                 Comment:
               </label>
               <textarea
@@ -527,7 +532,9 @@ export const FeedbackHistory = () => {
                   width: '100%',
                   padding: '10px',
                   borderRadius: '8px',
-                  border: '1px solid #cbd5e1',
+                  border: '1px solid #2a2e39',
+                  backgroundColor: '#131418',
+                  color: '#f8fafc',
                   boxSizing: 'border-box',
                   fontFamily: 'inherit',
                   fontSize: '0.875rem',
@@ -542,8 +549,9 @@ export const FeedbackHistory = () => {
                 style={{
                   padding: '9px 16px',
                   borderRadius: '8px',
-                  border: '1px solid #cbd5e1',
-                  backgroundColor: '#ffffff',
+                  border: '1px solid #2a2e39',
+                  backgroundColor: '#181a20',
+                  color: '#94a3b8',
                   cursor: 'pointer',
                   fontWeight: '600',
                 }}
@@ -556,11 +564,11 @@ export const FeedbackHistory = () => {
                 style={{
                   padding: '9px 20px',
                   borderRadius: '8px',
-                  backgroundColor: '#ea580c',
-                  color: '#ffffff',
+                  backgroundColor: '#fef08a',
+                  color: '#0f1013',
                   border: 'none',
                   cursor: updating ? 'not-allowed' : 'pointer',
-                  fontWeight: '700',
+                  fontWeight: '800',
                 }}
               >
                 {updating ? 'Saving...' : 'Save Changes'}

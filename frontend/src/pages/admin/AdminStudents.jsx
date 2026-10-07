@@ -59,13 +59,13 @@ export const AdminStudents = () => {
             fontFamily: "'Outfit', sans-serif",
             fontSize: '1.85rem',
             fontWeight: '800',
-            color: '#0f172a',
+            color: '#f8fafc',
             margin: '0 0 4px 0',
           }}
         >
           Registered Student Directory
         </h1>
-        <p style={{ margin: 0, color: '#64748b', fontSize: '0.925rem' }}>
+        <p style={{ margin: 0, color: '#94a3b8', fontSize: '0.925rem' }}>
           Overview of registered hostel residents, feedback contribution rates, and average ratings given
         </p>
       </div>
@@ -75,15 +75,15 @@ export const AdminStudents = () => {
       {/* Filter and Search Bar */}
       <div
         style={{
-          backgroundColor: '#ffffff',
+          backgroundColor: '#181a20',
           borderRadius: '16px',
           padding: '18px 20px',
-          border: '1px solid #e2e8f0',
+          border: '1px solid #262933',
           display: 'flex',
           flexWrap: 'wrap',
           alignItems: 'center',
           gap: '14px',
-          boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
+          boxShadow: '0 4px 20px -2px rgba(0,0,0,0.3)',
         }}
       >
         <form onSubmit={handleSearchSubmit} style={{ display: 'flex', flex: 1, gap: '10px' }}>
@@ -100,7 +100,9 @@ export const AdminStudents = () => {
                 width: '100%',
                 padding: '10px 14px 10px 40px',
                 borderRadius: '8px',
-                border: '1px solid #cbd5e1',
+                border: '1px solid #2a2e39',
+                backgroundColor: '#131418',
+                color: '#f8fafc',
                 fontSize: '0.9rem',
                 outline: 'none',
                 boxSizing: 'border-box',
@@ -111,11 +113,11 @@ export const AdminStudents = () => {
             type="submit"
             style={{
               padding: '10px 18px',
-              backgroundColor: '#ea580c',
-              color: '#ffffff',
+              backgroundColor: '#fef08a',
+              color: '#0f1013',
               border: 'none',
               borderRadius: '8px',
-              fontWeight: '700',
+              fontWeight: '800',
               fontSize: '0.85rem',
               cursor: 'pointer',
             }}
@@ -130,10 +132,11 @@ export const AdminStudents = () => {
           style={{
             padding: '10px 14px',
             borderRadius: '8px',
-            border: '1px solid #cbd5e1',
+            border: '1px solid #2a2e39',
+            backgroundColor: '#131418',
+            color: '#f8fafc',
             fontSize: '0.85rem',
             outline: 'none',
-            backgroundColor: '#ffffff',
           }}
         >
           <option value="">All Hostels</option>
@@ -156,17 +159,17 @@ export const AdminStudents = () => {
       ) : (
         <div
           style={{
-            backgroundColor: '#ffffff',
+            backgroundColor: '#181a20',
             borderRadius: '16px',
-            border: '1px solid #e2e8f0',
+            border: '1px solid #262933',
             overflow: 'hidden',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
+            boxShadow: '0 4px 20px -2px rgba(0,0,0,0.3)',
           }}
         >
           <div style={{ overflowX: 'auto' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.875rem' }}>
               <thead>
-                <tr style={{ backgroundColor: '#f8fafc', borderBottom: '1px solid #e2e8f0', color: '#475569', fontWeight: '700' }}>
+                <tr style={{ backgroundColor: '#14151a', borderBottom: '1px solid #262933', color: '#94a3b8', fontWeight: '700' }}>
                   <th style={{ padding: '14px 20px' }}>Student</th>
                   <th style={{ padding: '14px 20px' }}>Hostel Block</th>
                   <th style={{ padding: '14px 20px' }}>Room No.</th>
@@ -180,7 +183,7 @@ export const AdminStudents = () => {
                   <tr
                     key={student._id}
                     style={{
-                      borderBottom: idx < students.length - 1 ? '1px solid #f1f5f9' : 'none',
+                      borderBottom: idx < students.length - 1 ? '1px solid #22252e' : 'none',
                     }}
                   >
                     <td style={{ padding: '16px 20px' }}>
@@ -190,37 +193,39 @@ export const AdminStudents = () => {
                             width: '36px',
                             height: '36px',
                             borderRadius: '50%',
-                            backgroundColor: '#ffedd5',
-                            color: '#c2410c',
+                            backgroundColor: '#262315',
+                            border: '1px solid #785e1a',
+                            color: '#fef08a',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            fontWeight: '700',
+                            fontWeight: '800',
                           }}
                         >
                           {student.name?.charAt(0).toUpperCase()}
                         </div>
                         <div>
-                          <div style={{ fontWeight: '700', color: '#0f172a' }}>{student.name}</div>
-                          <div style={{ fontSize: '0.75rem', color: '#64748b' }}>{student.email}</div>
+                          <div style={{ fontWeight: '700', color: '#f8fafc' }}>{student.name}</div>
+                          <div style={{ fontSize: '0.75rem', color: '#94a3b8' }}>{student.email}</div>
                         </div>
                       </div>
                     </td>
-                    <td style={{ padding: '16px 20px', color: '#334155' }}>
+                    <td style={{ padding: '16px 20px', color: '#e2e8f0' }}>
                       {student.hostel}
                     </td>
-                    <td style={{ padding: '16px 20px', fontWeight: '600', color: '#0f172a' }}>
+                    <td style={{ padding: '16px 20px', fontWeight: '600', color: '#f8fafc' }}>
                       Room {student.roomNumber}
                     </td>
                     <td style={{ padding: '16px 20px' }}>
                       <span
                         style={{
-                          backgroundColor: '#f1f5f9',
+                          backgroundColor: '#241f3d',
+                          border: '1px solid #4a3e75',
                           padding: '3px 10px',
                           borderRadius: '6px',
                           fontSize: '0.8rem',
                           fontWeight: '700',
-                          color: '#334155',
+                          color: '#c4b5fd',
                         }}
                       >
                         {student.feedbackCount} feedback entries
@@ -230,12 +235,12 @@ export const AdminStudents = () => {
                       {student.avgRating ? (
                         <StarRating rating={student.avgRating} size={15} showLabel={true} />
                       ) : (
-                        <span style={{ fontSize: '0.75rem', color: '#94a3b8', fontStyle: 'italic' }}>
+                        <span style={{ fontSize: '0.75rem', color: '#64748b', fontStyle: 'italic' }}>
                           No reviews yet
                         </span>
                       )}
                     </td>
-                    <td style={{ padding: '16px 20px', color: '#64748b', fontSize: '0.8rem' }}>
+                    <td style={{ padding: '16px 20px', color: '#94a3b8', fontSize: '0.8rem' }}>
                       {new Date(student.createdAt).toLocaleDateString('en-US', {
                         month: 'short',
                         day: 'numeric',

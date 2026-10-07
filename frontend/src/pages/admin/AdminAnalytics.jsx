@@ -93,19 +93,19 @@ export const AdminAnalytics = () => {
               fontFamily: "'Outfit', sans-serif",
               fontSize: '1.85rem',
               fontWeight: '800',
-              color: '#0f172a',
+              color: '#f8fafc',
               margin: '0 0 4px 0',
             }}
           >
             Visual Quality Analytics
           </h1>
-          <p style={{ margin: 0, color: '#64748b', fontSize: '0.925rem' }}>
+          <p style={{ margin: 0, color: '#94a3b8', fontSize: '0.925rem' }}>
             Data-driven intelligence to monitor mess compliance, meal satisfaction, and kitchen defects
           </p>
         </div>
 
         {/* Days Filter */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', backgroundColor: '#e2e8f0', padding: '4px', borderRadius: '12px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', backgroundColor: '#181a20', padding: '4px', borderRadius: '12px', border: '1px solid #262933' }}>
           <button
             type="button"
             onClick={() => setDays(7)}
@@ -113,12 +113,12 @@ export const AdminAnalytics = () => {
               padding: '8px 16px',
               borderRadius: '8px',
               border: 'none',
-              backgroundColor: days === 7 ? '#ffffff' : 'transparent',
-              color: days === 7 ? '#ea580c' : '#64748b',
-              fontWeight: '700',
+              backgroundColor: days === 7 ? '#fef08a' : 'transparent',
+              color: days === 7 ? '#0f1013' : '#94a3b8',
+              fontWeight: days === 7 ? '800' : '600',
               fontSize: '0.85rem',
               cursor: 'pointer',
-              boxShadow: days === 7 ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+              transition: 'all 0.15s ease',
             }}
           >
             Last 7 Days
@@ -130,12 +130,12 @@ export const AdminAnalytics = () => {
               padding: '8px 16px',
               borderRadius: '8px',
               border: 'none',
-              backgroundColor: days === 30 ? '#ffffff' : 'transparent',
-              color: days === 30 ? '#ea580c' : '#64748b',
-              fontWeight: '700',
+              backgroundColor: days === 30 ? '#fef08a' : 'transparent',
+              color: days === 30 ? '#0f1013' : '#94a3b8',
+              fontWeight: days === 30 ? '800' : '600',
               fontSize: '0.85rem',
               cursor: 'pointer',
-              boxShadow: days === 30 ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+              transition: 'all 0.15s ease',
             }}
           >
             Last 30 Days
@@ -149,14 +149,14 @@ export const AdminAnalytics = () => {
       {overview?.breakdown && (
         <div
           style={{
-            backgroundColor: '#ffffff',
+            backgroundColor: '#181a20',
             borderRadius: '16px',
             padding: '24px',
-            border: '1px solid #e2e8f0',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
+            border: '1px solid #262933',
+            boxShadow: '0 4px 20px -2px rgba(0,0,0,0.3)',
           }}
         >
-          <h3 style={{ margin: '0 0 16px 0', fontSize: '1.1rem', fontWeight: '700', color: '#0f172a' }}>
+          <h3 style={{ margin: '0 0 16px 0', fontSize: '1.1rem', fontWeight: '700', color: '#f8fafc' }}>
             4-Pillar Quality Breakdown (Overall)
           </h3>
           <div
@@ -166,31 +166,31 @@ export const AdminAnalytics = () => {
               gap: '16px',
             }}
           >
-            <div style={{ padding: '16px', borderRadius: '12px', backgroundColor: '#fff7ed', border: '1px solid #fed7aa' }}>
-              <div style={{ fontSize: '0.78rem', fontWeight: '700', color: '#9a3412', textTransform: 'uppercase' }}>Taste & Flavor</div>
-              <div style={{ fontSize: '1.75rem', fontWeight: '800', color: '#c2410c', marginTop: '4px' }}>
-                {overview.breakdown.taste} <span style={{ fontSize: '1rem' }}>/ 5.0</span>
+            <div style={{ padding: '16px', borderRadius: '12px', backgroundColor: '#282315', border: '1px solid #785e1a' }}>
+              <div style={{ fontSize: '0.78rem', fontWeight: '700', color: '#fed7aa', textTransform: 'uppercase' }}>Taste & Flavor</div>
+              <div style={{ fontSize: '1.75rem', fontWeight: '800', color: '#fef08a', marginTop: '4px' }}>
+                {overview.breakdown.taste} <span style={{ fontSize: '1rem', color: '#94a3b8' }}>/ 5.0</span>
               </div>
             </div>
 
-            <div style={{ padding: '16px', borderRadius: '12px', backgroundColor: '#e0f2fe', border: '1px solid #bae6fd' }}>
-              <div style={{ fontSize: '0.78rem', fontWeight: '700', color: '#075985', textTransform: 'uppercase' }}>Food Quality</div>
-              <div style={{ fontSize: '1.75rem', fontWeight: '800', color: '#0284c7', marginTop: '4px' }}>
-                {overview.breakdown.quality} <span style={{ fontSize: '1rem' }}>/ 5.0</span>
+            <div style={{ padding: '16px', borderRadius: '12px', backgroundColor: '#221c3b', border: '1px solid #5b4d8a' }}>
+              <div style={{ fontSize: '0.78rem', fontWeight: '700', color: '#ddd6fe', textTransform: 'uppercase' }}>Food Quality</div>
+              <div style={{ fontSize: '1.75rem', fontWeight: '800', color: '#c4b5fd', marginTop: '4px' }}>
+                {overview.breakdown.quality} <span style={{ fontSize: '1rem', color: '#94a3b8' }}>/ 5.0</span>
               </div>
             </div>
 
-            <div style={{ padding: '16px', borderRadius: '12px', backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0' }}>
-              <div style={{ fontSize: '0.78rem', fontWeight: '700', color: '#166534', textTransform: 'uppercase' }}>Hygiene & Cleanliness</div>
-              <div style={{ fontSize: '1.75rem', fontWeight: '800', color: '#16a34a', marginTop: '4px' }}>
-                {overview.breakdown.hygiene} <span style={{ fontSize: '1rem' }}>/ 5.0</span>
+            <div style={{ padding: '16px', borderRadius: '12px', backgroundColor: '#14281e', border: '1px solid #23593b' }}>
+              <div style={{ fontSize: '0.78rem', fontWeight: '700', color: '#bbf7d0', textTransform: 'uppercase' }}>Hygiene & Cleanliness</div>
+              <div style={{ fontSize: '1.75rem', fontWeight: '800', color: '#86efac', marginTop: '4px' }}>
+                {overview.breakdown.hygiene} <span style={{ fontSize: '1rem', color: '#94a3b8' }}>/ 5.0</span>
               </div>
             </div>
 
-            <div style={{ padding: '16px', borderRadius: '12px', backgroundColor: '#f3e8ff', border: '1px solid #e9d5ff' }}>
-              <div style={{ fontSize: '0.78rem', fontWeight: '700', color: '#6b21a8', textTransform: 'uppercase' }}>Quantity & Portion</div>
-              <div style={{ fontSize: '1.75rem', fontWeight: '800', color: '#9333ea', marginTop: '4px' }}>
-                {overview.breakdown.quantity} <span style={{ fontSize: '1rem' }}>/ 5.0</span>
+            <div style={{ padding: '16px', borderRadius: '12px', backgroundColor: '#291e18', border: '1px solid #663d23' }}>
+              <div style={{ fontSize: '0.78rem', fontWeight: '700', color: '#fed7aa', textTransform: 'uppercase' }}>Quantity & Portion</div>
+              <div style={{ fontSize: '1.75rem', fontWeight: '800', color: '#fdba74', marginTop: '4px' }}>
+                {overview.breakdown.quantity} <span style={{ fontSize: '1rem', color: '#94a3b8' }}>/ 5.0</span>
               </div>
             </div>
           </div>
@@ -200,19 +200,19 @@ export const AdminAnalytics = () => {
       {/* Main Graph 1: Rating Trend Line Chart */}
       <div
         style={{
-          backgroundColor: '#ffffff',
+          backgroundColor: '#181a20',
           borderRadius: '16px',
           padding: '24px',
-          border: '1px solid #e2e8f0',
-          boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
+          border: '1px solid #262933',
+          boxShadow: '0 4px 20px -2px rgba(0,0,0,0.3)',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
           <div>
-            <h3 style={{ margin: '0 0 4px 0', fontSize: '1.2rem', fontWeight: '700', color: '#0f172a' }}>
+            <h3 style={{ margin: '0 0 4px 0', fontSize: '1.2rem', fontWeight: '700', color: '#f8fafc' }}>
               Mess Rating Trend (Last {days} Days)
             </h3>
-            <p style={{ margin: 0, fontSize: '0.85rem', color: '#64748b' }}>
+            <p style={{ margin: 0, fontSize: '0.85rem', color: '#94a3b8' }}>
               Chronological daily satisfaction trend based on verified student ratings
             </p>
           </div>
@@ -222,24 +222,24 @@ export const AdminAnalytics = () => {
         <div style={{ width: '100%', height: '320px' }}>
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={ratingTrend} margin={{ top: 10, right: 30, left: 0, bottom: 10 }}>
-              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
-              <XAxis dataKey="displayDate" stroke="#64748b" fontSize={12} tickLine={false} />
-              <YAxis domain={[0, 5]} stroke="#64748b" fontSize={12} tickLine={false} />
+              <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#262933" />
+              <XAxis dataKey="displayDate" stroke="#94a3b8" fontSize={12} tickLine={false} />
+              <YAxis domain={[0, 5]} stroke="#94a3b8" fontSize={12} tickLine={false} />
               <Tooltip
                 formatter={(val, name, props) => [
                   `${val} ⭐ (${props.payload.count} reviews)`,
                   'Average Rating',
                 ]}
-                contentStyle={{ backgroundColor: '#0f172a', color: '#fff', borderRadius: '8px', border: 'none' }}
+                contentStyle={{ backgroundColor: '#181a20', color: '#f8fafc', borderRadius: '8px', border: '1px solid #262933' }}
               />
               <Legend />
               <Line
                 type="monotone"
                 dataKey="averageRating"
                 name="Mess Average Rating"
-                stroke="#ea580c"
+                stroke="#fef08a"
                 strokeWidth={3}
-                dot={{ r: 5, fill: '#ea580c', stroke: '#ffffff', strokeWidth: 2 }}
+                dot={{ r: 5, fill: '#fef08a', stroke: '#181a20', strokeWidth: 2 }}
                 activeDot={{ r: 7 }}
               />
             </LineChart>
@@ -252,19 +252,19 @@ export const AdminAnalytics = () => {
         {/* Multi-Dimensional Ratings per Meal */}
         <div
           style={{
-            backgroundColor: '#ffffff',
+            backgroundColor: '#181a20',
             borderRadius: '16px',
             padding: '24px',
-            border: '1px solid #e2e8f0',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
+            border: '1px solid #262933',
+            boxShadow: '0 4px 20px -2px rgba(0,0,0,0.3)',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
             <div>
-              <h3 style={{ margin: '0 0 4px 0', fontSize: '1.2rem', fontWeight: '700', color: '#0f172a' }}>
+              <h3 style={{ margin: '0 0 4px 0', fontSize: '1.2rem', fontWeight: '700', color: '#f8fafc' }}>
                 Average Rating by Meal
               </h3>
-              <p style={{ margin: 0, fontSize: '0.85rem', color: '#64748b' }}>
+              <p style={{ margin: 0, fontSize: '0.85rem', color: '#94a3b8' }}>
                 Comparing Taste, Quality, Hygiene, and Quantity scores across meals
               </p>
             </div>
@@ -274,18 +274,18 @@ export const AdminAnalytics = () => {
           <div style={{ width: '100%', height: '320px' }}>
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={mealRatings} margin={{ top: 10, right: 20, left: -10, bottom: 5 }}>
-                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
-                <XAxis dataKey="meal" stroke="#64748b" fontSize={12} tickLine={false} />
-                <YAxis domain={[0, 5]} stroke="#64748b" fontSize={12} tickLine={false} />
+                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#262933" />
+                <XAxis dataKey="meal" stroke="#94a3b8" fontSize={12} tickLine={false} />
+                <YAxis domain={[0, 5]} stroke="#94a3b8" fontSize={12} tickLine={false} />
                 <Tooltip
                   formatter={(val) => [`${val} ★`]}
-                  contentStyle={{ backgroundColor: '#0f172a', color: '#fff', borderRadius: '8px', border: 'none' }}
+                  contentStyle={{ backgroundColor: '#181a20', color: '#f8fafc', borderRadius: '8px', border: '1px solid #262933' }}
                 />
                 <Legend />
-                <Bar dataKey="taste" name="Taste" fill="#ea580c" radius={[4, 4, 0, 0]} />
-                <Bar dataKey="quality" name="Quality" fill="#0284c7" radius={[4, 4, 0, 0]} />
-                <Bar dataKey="hygiene" name="Hygiene" fill="#16a34a" radius={[4, 4, 0, 0]} />
-                <Bar dataKey="quantity" name="Quantity" fill="#9333ea" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="taste" name="Taste" fill="#fef08a" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="quality" name="Quality" fill="#c4b5fd" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="hygiene" name="Hygiene" fill="#bbf7d0" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="quantity" name="Quantity" fill="#fed7aa" radius={[4, 4, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -294,19 +294,19 @@ export const AdminAnalytics = () => {
         {/* Most Reported Food Issues */}
         <div
           style={{
-            backgroundColor: '#ffffff',
+            backgroundColor: '#181a20',
             borderRadius: '16px',
             padding: '24px',
-            border: '1px solid #e2e8f0',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
+            border: '1px solid #262933',
+            boxShadow: '0 4px 20px -2px rgba(0,0,0,0.3)',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
             <div>
-              <h3 style={{ margin: '0 0 4px 0', fontSize: '1.2rem', fontWeight: '700', color: '#0f172a' }}>
+              <h3 style={{ margin: '0 0 4px 0', fontSize: '1.2rem', fontWeight: '700', color: '#f8fafc' }}>
                 Most Reported Food Issues
               </h3>
-              <p style={{ margin: 0, fontSize: '0.85rem', color: '#64748b' }}>
+              <p style={{ margin: 0, fontSize: '0.85rem', color: '#94a3b8' }}>
                 Identifies recurring kitchen failures requiring supervision
               </p>
             </div>
@@ -320,12 +320,12 @@ export const AdminAnalytics = () => {
                 layout="vertical"
                 margin={{ top: 5, right: 30, left: 60, bottom: 5 }}
               >
-                <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#f1f5f9" />
-                <XAxis type="number" stroke="#64748b" fontSize={12} tickLine={false} />
+                <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#262933" />
+                <XAxis type="number" stroke="#94a3b8" fontSize={12} tickLine={false} />
                 <YAxis
                   dataKey="issue"
                   type="category"
-                  stroke="#64748b"
+                  stroke="#94a3b8"
                   fontSize={12}
                   tickLine={false}
                   width={100}
@@ -335,7 +335,7 @@ export const AdminAnalytics = () => {
                     `${val} occurrences (${props.payload.percentage}% of issues)`,
                     'Report Count',
                   ]}
-                  contentStyle={{ backgroundColor: '#0f172a', color: '#fff', borderRadius: '8px', border: 'none' }}
+                  contentStyle={{ backgroundColor: '#181a20', color: '#f8fafc', borderRadius: '8px', border: '1px solid #262933' }}
                 />
                 <Bar dataKey="count" radius={[0, 8, 8, 0]}>
                   {issuesData.map((entry, index) => (

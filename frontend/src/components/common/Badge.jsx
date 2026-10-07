@@ -1,16 +1,16 @@
 import React from 'react';
 
 const MEAL_COLORS = {
-  Breakfast: { bg: '#fef3c7', text: '#b45309', border: '#fde68a' }, // Amber
-  Lunch: { bg: '#e0f2fe', text: '#0369a1', border: '#bae6fd' },     // Sky Blue
-  Snacks: { bg: '#ffedd5', text: '#c2410c', border: '#fed7aa' },    // Orange
-  Dinner: { bg: '#f3e8ff', text: '#6b21a8', border: '#e9d5ff' },    // Purple
+  Breakfast: { bg: '#fef08a', text: '#0f1013', border: 'transparent' }, // Honey Yellow Pastel
+  Lunch: { bg: '#c4b5fd', text: '#0f1013', border: 'transparent' },     // Soft Lilac / Lavender Pastel
+  Snacks: { bg: '#fed7aa', text: '#0f1013', border: 'transparent' },    // Warm Peach Pastel
+  Dinner: { bg: '#bbf7d0', text: '#0f1013', border: 'transparent' },    // Mint Lime Pastel
 };
 
 const RATING_COLORS = {
-  high: { bg: '#dcfce7', text: '#15803d', border: '#bbf7d0' },  // Green (>= 4.0)
-  medium: { bg: '#fef9c3', text: '#a16207', border: '#fef08a' },// Yellow (>= 3.0)
-  low: { bg: '#fee2e2', text: '#b91c1c', border: '#fecaca' },   // Red (< 3.0)
+  high: { bg: '#143823', text: '#86efac', border: '#1f5735' },   // Subtle dark green
+  medium: { bg: '#362a12', text: '#fde047', border: '#54421b' }, // Subtle dark amber
+  low: { bg: '#381619', text: '#fca5a5', border: '#572227' },    // Subtle dark red
 };
 
 export const Badge = ({

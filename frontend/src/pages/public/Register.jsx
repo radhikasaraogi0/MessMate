@@ -158,17 +158,17 @@ export const Register = () => {
         alignItems: 'center',
         justifyContent: 'center',
         padding: '36px 16px',
-        backgroundColor: '#f8fafc',
+        backgroundColor: '#111215',
       }}
     >
       <div
         style={{
           width: '100%',
           maxWidth: activeTab === 'mess' ? '540px' : '480px',
-          backgroundColor: '#ffffff',
+          backgroundColor: '#181a20',
           borderRadius: '20px',
-          boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02)',
-          border: '1px solid #e2e8f0',
+          boxShadow: '0 20px 40px -10px rgba(0, 0, 0, 0.6)',
+          border: '1px solid #262933',
           padding: '36px 32px',
           transition: 'max-width 0.2s ease',
         }}
@@ -182,13 +182,13 @@ export const Register = () => {
               fontFamily: "'Outfit', sans-serif",
               fontSize: '1.65rem',
               fontWeight: '800',
-              color: '#0f172a',
+              color: '#f8fafc',
               margin: '0 0 6px 0',
             }}
           >
             {activeTab === 'student' ? 'Student Registration' : 'Register New Mess'}
           </h2>
-          <p style={{ color: '#64748b', fontSize: '0.9rem', margin: 0 }}>
+          <p style={{ color: '#94a3b8', fontSize: '0.9rem', margin: 0 }}>
             {activeTab === 'student'
               ? 'Join your campus mess on MessMate to rate meals and track menus'
               : 'Add your hostel dining hall and manage meals, complaints & reviews'}
@@ -199,9 +199,10 @@ export const Register = () => {
         <div
           style={{
             display: 'flex',
-            backgroundColor: '#f1f5f9',
+            backgroundColor: '#131418',
             padding: '4px',
             borderRadius: '12px',
+            border: '1px solid #262933',
             marginBottom: '20px',
           }}
         >
@@ -216,12 +217,11 @@ export const Register = () => {
               padding: '9px 12px',
               borderRadius: '9px',
               border: 'none',
-              backgroundColor: activeTab === 'student' ? '#ffffff' : 'transparent',
-              color: activeTab === 'student' ? '#ea580c' : '#64748b',
-              fontWeight: '700',
+              backgroundColor: activeTab === 'student' ? '#fef08a' : 'transparent',
+              color: activeTab === 'student' ? '#0f1013' : '#94a3b8',
+              fontWeight: '800',
               fontSize: '0.85rem',
               cursor: 'pointer',
-              boxShadow: activeTab === 'student' ? '0 2px 5px rgba(0,0,0,0.06)' : 'none',
               transition: 'all 0.15s ease',
             }}
           >
@@ -238,12 +238,11 @@ export const Register = () => {
               padding: '9px 12px',
               borderRadius: '9px',
               border: 'none',
-              backgroundColor: activeTab === 'mess' ? '#ffffff' : 'transparent',
-              color: activeTab === 'mess' ? '#0284c7' : '#64748b',
-              fontWeight: '700',
+              backgroundColor: activeTab === 'mess' ? '#c4b5fd' : 'transparent',
+              color: activeTab === 'mess' ? '#0f1013' : '#94a3b8',
+              fontWeight: '800',
               fontSize: '0.85rem',
               cursor: 'pointer',
-              boxShadow: activeTab === 'mess' ? '0 2px 5px rgba(0,0,0,0.06)' : 'none',
               transition: 'all 0.15s ease',
             }}
           >
@@ -259,11 +258,11 @@ export const Register = () => {
           <form onSubmit={handleStudentSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
             {/* Mess Selector */}
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#334155', marginBottom: '6px' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#f8fafc', marginBottom: '6px' }}>
                 Select Your Mess *
               </label>
               <div style={{ position: 'relative' }}>
-                <div style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#ea580c' }}>
+                <div style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#fef08a' }}>
                   <UtensilsCrossed size={18} />
                 </div>
                 <select
@@ -274,13 +273,13 @@ export const Register = () => {
                     width: '100%',
                     padding: '10px 12px 10px 38px',
                     borderRadius: '10px',
-                    border: '1px solid #cbd5e1',
+                    border: '1px solid #2a2e39',
                     fontSize: '0.9rem',
                     outline: 'none',
-                    backgroundColor: '#ffffff',
+                    backgroundColor: '#131418',
                     boxSizing: 'border-box',
-                    color: '#0f172a',
-                    fontWeight: '500',
+                    color: '#f8fafc',
+                    fontWeight: '600',
                   }}
                 >
                   {loadingMesses ? (
@@ -298,7 +297,7 @@ export const Register = () => {
 
             {/* Full Name */}
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#334155', marginBottom: '6px' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#f8fafc', marginBottom: '6px' }}>
                 Full Name *
               </label>
               <div style={{ position: 'relative' }}>
@@ -315,7 +314,9 @@ export const Register = () => {
                     width: '100%',
                     padding: '10px 12px 10px 38px',
                     borderRadius: '10px',
-                    border: '1px solid #cbd5e1',
+                    border: '1px solid #2a2e39',
+                    backgroundColor: '#131418',
+                    color: '#f8fafc',
                     fontSize: '0.925rem',
                     outline: 'none',
                     boxSizing: 'border-box',
@@ -326,7 +327,7 @@ export const Register = () => {
 
             {/* Email */}
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#334155', marginBottom: '6px' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#f8fafc', marginBottom: '6px' }}>
                 College Email Address *
               </label>
               <div style={{ position: 'relative' }}>
@@ -343,7 +344,9 @@ export const Register = () => {
                     width: '100%',
                     padding: '10px 12px 10px 38px',
                     borderRadius: '10px',
-                    border: '1px solid #cbd5e1',
+                    border: '1px solid #2a2e39',
+                    backgroundColor: '#131418',
+                    color: '#f8fafc',
                     fontSize: '0.925rem',
                     outline: 'none',
                     boxSizing: 'border-box',
@@ -354,7 +357,7 @@ export const Register = () => {
 
             {/* Password */}
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#334155', marginBottom: '6px' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#f8fafc', marginBottom: '6px' }}>
                 Password (min. 6 characters) *
               </label>
               <div style={{ position: 'relative' }}>
@@ -371,7 +374,9 @@ export const Register = () => {
                     width: '100%',
                     padding: '10px 12px 10px 38px',
                     borderRadius: '10px',
-                    border: '1px solid #cbd5e1',
+                    border: '1px solid #2a2e39',
+                    backgroundColor: '#131418',
+                    color: '#f8fafc',
                     fontSize: '0.925rem',
                     outline: 'none',
                     boxSizing: 'border-box',
@@ -383,7 +388,7 @@ export const Register = () => {
             {/* Hostel and Room Number Grid */}
             <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: '12px' }}>
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#334155', marginBottom: '6px' }}>
+                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#f8fafc', marginBottom: '6px' }}>
                   Hostel / Block *
                 </label>
                 <div style={{ position: 'relative' }}>
@@ -397,10 +402,11 @@ export const Register = () => {
                       width: '100%',
                       padding: '10px 12px 10px 38px',
                       borderRadius: '10px',
-                      border: '1px solid #cbd5e1',
+                      border: '1px solid #2a2e39',
+                      backgroundColor: '#131418',
+                      color: '#f8fafc',
                       fontSize: '0.9rem',
                       outline: 'none',
-                      backgroundColor: '#ffffff',
                       boxSizing: 'border-box',
                     }}
                   >
@@ -414,7 +420,7 @@ export const Register = () => {
               </div>
 
               <div>
-                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#334155', marginBottom: '6px' }}>
+                <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#f8fafc', marginBottom: '6px' }}>
                   Room No. *
                 </label>
                 <div style={{ position: 'relative' }}>
@@ -431,7 +437,9 @@ export const Register = () => {
                       width: '100%',
                       padding: '10px 12px 10px 38px',
                       borderRadius: '10px',
-                      border: '1px solid #cbd5e1',
+                      border: '1px solid #2a2e39',
+                      backgroundColor: '#131418',
+                      color: '#f8fafc',
                       fontSize: '0.9rem',
                       outline: 'none',
                       boxSizing: 'border-box',
@@ -446,19 +454,19 @@ export const Register = () => {
               disabled={submitting}
               style={{
                 marginTop: '8px',
-                backgroundColor: '#ea580c',
-                color: '#ffffff',
+                backgroundColor: '#fef08a',
+                color: '#0f1013',
                 border: 'none',
                 padding: '13px',
                 borderRadius: '10px',
                 fontSize: '1rem',
-                fontWeight: '700',
+                fontWeight: '800',
                 cursor: submitting ? 'not-allowed' : 'pointer',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: '8px',
-                boxShadow: '0 4px 6px -1px rgba(234, 88, 12, 0.3)',
+                boxShadow: '0 4px 14px rgba(254, 240, 138, 0.25)',
                 opacity: submitting ? 0.7 : 1,
               }}
             >
@@ -475,10 +483,10 @@ export const Register = () => {
               style={{
                 padding: '10px 14px',
                 borderRadius: '10px',
-                backgroundColor: '#f0f9ff',
-                border: '1px solid #bae6fd',
+                backgroundColor: '#161c2e',
+                border: '1px solid #23345d',
                 fontSize: '0.825rem',
-                color: '#0369a1',
+                color: '#93c5fd',
                 lineHeight: 1.45,
               }}
             >
@@ -487,11 +495,11 @@ export const Register = () => {
 
             {/* Mess Name */}
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#334155', marginBottom: '6px' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#f8fafc', marginBottom: '6px' }}>
                 Mess Name *
               </label>
               <div style={{ position: 'relative' }}>
-                <div style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#0284c7' }}>
+                <div style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#c4b5fd' }}>
                   <UtensilsCrossed size={18} />
                 </div>
                 <input
@@ -504,7 +512,9 @@ export const Register = () => {
                     width: '100%',
                     padding: '10px 12px 10px 38px',
                     borderRadius: '10px',
-                    border: '1px solid #cbd5e1',
+                    border: '1px solid #2a2e39',
+                    backgroundColor: '#131418',
+                    color: '#f8fafc',
                     fontSize: '0.925rem',
                     outline: 'none',
                     boxSizing: 'border-box',
@@ -515,11 +525,11 @@ export const Register = () => {
 
             {/* Area */}
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#334155', marginBottom: '6px' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#f8fafc', marginBottom: '6px' }}>
                 Area / Zone *
               </label>
               <div style={{ position: 'relative' }}>
-                <div style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#0284c7' }}>
+                <div style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: '#c4b5fd' }}>
                   <MapPin size={18} />
                 </div>
                 <input
@@ -532,7 +542,9 @@ export const Register = () => {
                     width: '100%',
                     padding: '10px 12px 10px 38px',
                     borderRadius: '10px',
-                    border: '1px solid #cbd5e1',
+                    border: '1px solid #2a2e39',
+                    backgroundColor: '#131418',
+                    color: '#f8fafc',
                     fontSize: '0.925rem',
                     outline: 'none',
                     boxSizing: 'border-box',
@@ -543,7 +555,7 @@ export const Register = () => {
 
             {/* Description */}
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#334155', marginBottom: '6px' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '600', color: '#f8fafc', marginBottom: '6px' }}>
                 Mess Description (Optional)
               </label>
               <input
@@ -555,7 +567,9 @@ export const Register = () => {
                   width: '100%',
                   padding: '10px 12px',
                   borderRadius: '10px',
-                  border: '1px solid #cbd5e1',
+                  border: '1px solid #2a2e39',
+                  backgroundColor: '#131418',
+                  color: '#f8fafc',
                   fontSize: '0.925rem',
                   outline: 'none',
                   boxSizing: 'border-box',
@@ -567,23 +581,23 @@ export const Register = () => {
               style={{
                 marginTop: '6px',
                 paddingTop: '12px',
-                borderTop: '1px dashed #cbd5e1',
+                borderTop: '1px dashed #262933',
                 fontWeight: '700',
                 fontSize: '0.85rem',
-                color: '#334155',
+                color: '#f8fafc',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '6px',
               }}
             >
-              <ShieldCheck size={16} color="#0284c7" />
+              <ShieldCheck size={16} color="#c4b5fd" />
               Mess Authority (Admin) Account Details
             </div>
 
             {/* Admin Name & Office */}
             <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: '12px' }}>
               <div>
-                <label style={{ display: 'block', fontSize: '0.825rem', fontWeight: '600', color: '#334155', marginBottom: '4px' }}>
+                <label style={{ display: 'block', fontSize: '0.825rem', fontWeight: '600', color: '#f8fafc', marginBottom: '4px' }}>
                   Authority Name *
                 </label>
                 <input
@@ -596,7 +610,9 @@ export const Register = () => {
                     width: '100%',
                     padding: '9px 12px',
                     borderRadius: '9px',
-                    border: '1px solid #cbd5e1',
+                    border: '1px solid #2a2e39',
+                    backgroundColor: '#131418',
+                    color: '#f8fafc',
                     fontSize: '0.9rem',
                     outline: 'none',
                     boxSizing: 'border-box',
@@ -604,7 +620,7 @@ export const Register = () => {
                 />
               </div>
               <div>
-                <label style={{ display: 'block', fontSize: '0.825rem', fontWeight: '600', color: '#334155', marginBottom: '4px' }}>
+                <label style={{ display: 'block', fontSize: '0.825rem', fontWeight: '600', color: '#f8fafc', marginBottom: '4px' }}>
                   Office Room
                 </label>
                 <input
@@ -616,7 +632,9 @@ export const Register = () => {
                     width: '100%',
                     padding: '9px 12px',
                     borderRadius: '9px',
-                    border: '1px solid #cbd5e1',
+                    border: '1px solid #2a2e39',
+                    backgroundColor: '#131418',
+                    color: '#f8fafc',
                     fontSize: '0.9rem',
                     outline: 'none',
                     boxSizing: 'border-box',
@@ -628,7 +646,7 @@ export const Register = () => {
             {/* Admin Email & Password */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
               <div>
-                <label style={{ display: 'block', fontSize: '0.825rem', fontWeight: '600', color: '#334155', marginBottom: '4px' }}>
+                <label style={{ display: 'block', fontSize: '0.825rem', fontWeight: '600', color: '#f8fafc', marginBottom: '4px' }}>
                   Official Email *
                 </label>
                 <input
@@ -641,7 +659,9 @@ export const Register = () => {
                     width: '100%',
                     padding: '9px 12px',
                     borderRadius: '9px',
-                    border: '1px solid #cbd5e1',
+                    border: '1px solid #2a2e39',
+                    backgroundColor: '#131418',
+                    color: '#f8fafc',
                     fontSize: '0.9rem',
                     outline: 'none',
                     boxSizing: 'border-box',
@@ -649,7 +669,7 @@ export const Register = () => {
                 />
               </div>
               <div>
-                <label style={{ display: 'block', fontSize: '0.825rem', fontWeight: '600', color: '#334155', marginBottom: '4px' }}>
+                <label style={{ display: 'block', fontSize: '0.825rem', fontWeight: '600', color: '#f8fafc', marginBottom: '4px' }}>
                   Password *
                 </label>
                 <input
@@ -662,7 +682,9 @@ export const Register = () => {
                     width: '100%',
                     padding: '9px 12px',
                     borderRadius: '9px',
-                    border: '1px solid #cbd5e1',
+                    border: '1px solid #2a2e39',
+                    backgroundColor: '#131418',
+                    color: '#f8fafc',
                     fontSize: '0.9rem',
                     outline: 'none',
                     boxSizing: 'border-box',
@@ -676,19 +698,19 @@ export const Register = () => {
               disabled={submitting}
               style={{
                 marginTop: '10px',
-                backgroundColor: '#0284c7',
-                color: '#ffffff',
+                backgroundColor: '#c4b5fd',
+                color: '#0f1013',
                 border: 'none',
                 padding: '13px',
                 borderRadius: '10px',
                 fontSize: '1rem',
-                fontWeight: '700',
+                fontWeight: '800',
                 cursor: submitting ? 'not-allowed' : 'pointer',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 gap: '8px',
-                boxShadow: '0 4px 6px -1px rgba(2, 132, 199, 0.3)',
+                boxShadow: '0 4px 14px rgba(196, 181, 253, 0.25)',
                 opacity: submitting ? 0.7 : 1,
               }}
             >
@@ -698,9 +720,9 @@ export const Register = () => {
           </form>
         )}
 
-        <div style={{ marginTop: '24px', textAlign: 'center', fontSize: '0.875rem', color: '#64748b' }}>
+        <div style={{ marginTop: '24px', textAlign: 'center', fontSize: '0.875rem', color: '#94a3b8' }}>
           Already have an account?{' '}
-          <Link to="/login" style={{ color: '#ea580c', fontWeight: '700', textDecoration: 'none' }}>
+          <Link to="/login" style={{ color: '#fef08a', fontWeight: '800', textDecoration: 'none' }}>
             Sign In
           </Link>
         </div>

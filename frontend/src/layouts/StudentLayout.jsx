@@ -4,19 +4,19 @@ import Navbar from '../components/layout/Navbar';
 
 export const StudentLayout = () => {
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: '#f8fafc' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: '#111215' }}>
       <Navbar />
       <main style={{ flex: 1, padding: '24px 20px', maxWidth: '1280px', width: '100%', margin: '0 auto', boxSizing: 'border-box' }}>
         <Outlet />
       </main>
       <footer
         style={{
-          borderTop: '1px solid #e2e8f0',
-          backgroundColor: '#ffffff',
+          borderTop: '1px solid #262933',
+          backgroundColor: '#16181d',
           padding: '20px',
           textAlign: 'center',
           fontSize: '0.825rem',
-          color: '#64748b',
+          color: '#94a3b8',
         }}
       >
         <p style={{ margin: 0 }}>

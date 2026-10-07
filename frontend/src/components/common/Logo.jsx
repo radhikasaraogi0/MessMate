@@ -18,12 +18,12 @@ export const Logo = ({ size = 'md', isDark = false, showTagline = true }) => {
           width: `${boxDim}px`,
           height: `${boxDim}px`,
           borderRadius: isSmall ? '8px' : isLarge ? '16px' : '12px',
-          background: 'linear-gradient(135deg, #f97316 0%, #ea580c 55%, #c2410c 100%)',
+          background: '#facc15',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          color: '#ffffff',
-          boxShadow: '0 4px 10px -1px rgba(234, 88, 12, 0.35)',
+          color: '#0f172a',
+          boxShadow: '0 4px 14px rgba(250, 204, 21, 0.25)',
           position: 'relative',
           flexShrink: 0,
         }}
@@ -39,19 +39,19 @@ export const Logo = ({ size = 'md', isDark = false, showTagline = true }) => {
             fontSize,
             fontWeight: '800',
             letterSpacing: '-0.025em',
-            color: isDark ? '#ffffff' : '#0f172a',
+            color: '#f8fafc',
             display: 'flex',
             alignItems: 'center',
           }}
         >
           <span>Mess</span>
-          <span style={{ color: '#ea580c' }}>Mate</span>
+          <span style={{ color: '#facc15' }}>Mate</span>
           <span
             style={{
               width: isSmall ? '4px' : '5px',
               height: isSmall ? '4px' : '5px',
               borderRadius: '50%',
-              backgroundColor: '#ea580c',
+              backgroundColor: '#facc15',
               marginLeft: '2px',
               marginTop: '4px',
             }}
@@ -63,7 +63,7 @@ export const Logo = ({ size = 'md', isDark = false, showTagline = true }) => {
             style={{
               fontSize: taglineSize,
               fontWeight: '700',
-              color: isDark ? '#94a3b8' : '#64748b',
+              color: '#94a3b8',
               letterSpacing: '0.05em',
               textTransform: 'uppercase',
               marginTop: '3px',

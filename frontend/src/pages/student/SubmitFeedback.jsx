@@ -125,7 +125,7 @@ export const SubmitFeedback = () => {
     <div style={{ maxWidth: '780px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '24px' }}>
       {/* Title */}
       <div>
-        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#ea580c', fontWeight: '700', fontSize: '0.85rem', marginBottom: '4px' }}>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#fef08a', fontWeight: '700', fontSize: '0.85rem', marginBottom: '4px' }}>
           <Sparkles size={16} />
           <span>Meal Quality Voice</span>
         </div>
@@ -134,13 +134,13 @@ export const SubmitFeedback = () => {
             fontFamily: "'Outfit', sans-serif",
             fontSize: '1.85rem',
             fontWeight: '800',
-            color: '#0f172a',
+            color: '#f8fafc',
             margin: '0 0 6px 0',
           }}
         >
           Give Mess Feedback
         </h1>
-        <p style={{ margin: 0, color: '#64748b', fontSize: '0.95rem' }}>
+        <p style={{ margin: 0, color: '#94a3b8', fontSize: '0.95rem' }}>
           Your honest reviews hold the catering service accountable and directly guide mess menu improvements.
         </p>
       </div>
@@ -151,10 +151,10 @@ export const SubmitFeedback = () => {
       <form
         onSubmit={handleSubmit}
         style={{
-          backgroundColor: '#ffffff',
+          backgroundColor: '#181a20',
           borderRadius: '20px',
-          border: '1px solid #e2e8f0',
-          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.03)',
+          border: '1px solid #262933',
+          boxShadow: '0 4px 20px -2px rgba(0, 0, 0, 0.4)',
           padding: '32px',
           display: 'flex',
           flexDirection: 'column',
@@ -177,11 +177,11 @@ export const SubmitFeedback = () => {
                 gap: '6px',
                 fontSize: '0.875rem',
                 fontWeight: '700',
-                color: '#334155',
+                color: '#f8fafc',
                 marginBottom: '8px',
               }}
             >
-              <Calendar size={16} color="#ea580c" />
+              <Calendar size={16} color="#fef08a" />
               <span>Select Date</span>
             </label>
             <input
@@ -194,7 +194,9 @@ export const SubmitFeedback = () => {
                 width: '100%',
                 padding: '11px 14px',
                 borderRadius: '10px',
-                border: '1px solid #cbd5e1',
+                border: '1px solid #2a2e39',
+                backgroundColor: '#131418',
+                color: '#f8fafc',
                 fontSize: '0.925rem',
                 outline: 'none',
                 boxSizing: 'border-box',
@@ -210,11 +212,11 @@ export const SubmitFeedback = () => {
                 gap: '6px',
                 fontSize: '0.875rem',
                 fontWeight: '700',
-                color: '#334155',
+                color: '#f8fafc',
                 marginBottom: '8px',
               }}
             >
-              <Utensils size={16} color="#ea580c" />
+              <Utensils size={16} color="#fef08a" />
               <span>Meal Type</span>
             </label>
             <select
@@ -224,10 +226,11 @@ export const SubmitFeedback = () => {
                 width: '100%',
                 padding: '11px 14px',
                 borderRadius: '10px',
-                border: '1px solid #cbd5e1',
+                border: '1px solid #2a2e39',
                 fontSize: '0.925rem',
                 outline: 'none',
-                backgroundColor: '#ffffff',
+                backgroundColor: '#131418',
+                color: '#f8fafc',
                 boxSizing: 'border-box',
                 fontWeight: '600',
                 cursor: 'pointer',
@@ -251,23 +254,23 @@ export const SubmitFeedback = () => {
         {!availability.isAvailable && (
           <div
             style={{
-              backgroundColor: '#fffbeb',
+              backgroundColor: '#221c10',
               borderRadius: '12px',
               padding: '14px 18px',
-              border: '1px solid #fde68a',
+              border: '1px solid #5a441a',
               display: 'flex',
               alignItems: 'center',
               gap: '12px',
-              color: '#92400e',
+              color: '#fef08a',
               fontSize: '0.9rem',
             }}
           >
-            <Clock size={22} color="#d97706" style={{ flexShrink: 0 }} />
+            <Clock size={22} color="#fbbf24" style={{ flexShrink: 0 }} />
             <div>
               <strong style={{ display: 'block', marginBottom: '2px' }}>
                 Meal has not started yet
               </strong>
-              <span>{availability.reason}</span>
+              <span style={{ color: '#fed7aa' }}>{availability.reason}</span>
             </div>
           </div>
         )}
@@ -275,18 +278,18 @@ export const SubmitFeedback = () => {
         {/* 4 Pillars of Rating */}
         <div>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
-            <h3 style={{ margin: 0, fontSize: '1.15rem', fontWeight: '700', color: '#0f172a' }}>
+            <h3 style={{ margin: 0, fontSize: '1.15rem', fontWeight: '700', color: '#f8fafc' }}>
               Meal Quality Ratings (1 to 5 Stars)
             </h3>
             <div
               style={{
-                backgroundColor: '#fff7ed',
-                border: '1px solid #fed7aa',
+                backgroundColor: '#292415',
+                border: '1px solid #785e1a',
                 padding: '4px 12px',
                 borderRadius: '9999px',
                 fontSize: '0.85rem',
                 fontWeight: '700',
-                color: '#c2410c',
+                color: '#fef08a',
               }}
             >
               Calculated Average: {calculateOverall()} ⭐
@@ -303,17 +306,17 @@ export const SubmitFeedback = () => {
             {/* Taste Rating */}
             <div
               style={{
-                backgroundColor: '#f8fafc',
+                backgroundColor: '#131418',
                 padding: '16px 20px',
                 borderRadius: '14px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #22252e',
               }}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                <span style={{ fontWeight: '700', fontSize: '0.9rem', color: '#334155' }}>
+                <span style={{ fontWeight: '700', fontSize: '0.9rem', color: '#e2e8f0' }}>
                   Taste & Flavor
                 </span>
-                <span style={{ fontWeight: '700', color: '#ea580c' }}>{tasteRating} / 5</span>
+                <span style={{ fontWeight: '700', color: '#fef08a' }}>{tasteRating} / 5</span>
               </div>
               <StarRating
                 rating={tasteRating}
@@ -326,17 +329,17 @@ export const SubmitFeedback = () => {
             {/* Food Quality Rating */}
             <div
               style={{
-                backgroundColor: '#f8fafc',
+                backgroundColor: '#131418',
                 padding: '16px 20px',
                 borderRadius: '14px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #22252e',
               }}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                <span style={{ fontWeight: '700', fontSize: '0.9rem', color: '#334155' }}>
+                <span style={{ fontWeight: '700', fontSize: '0.9rem', color: '#e2e8f0' }}>
                   Food Quality
                 </span>
-                <span style={{ fontWeight: '700', color: '#ea580c' }}>{qualityRating} / 5</span>
+                <span style={{ fontWeight: '700', color: '#fef08a' }}>{qualityRating} / 5</span>
               </div>
               <StarRating
                 rating={qualityRating}
@@ -349,17 +352,17 @@ export const SubmitFeedback = () => {
             {/* Hygiene Rating */}
             <div
               style={{
-                backgroundColor: '#f8fafc',
+                backgroundColor: '#131418',
                 padding: '16px 20px',
                 borderRadius: '14px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #22252e',
               }}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                <span style={{ fontWeight: '700', fontSize: '0.9rem', color: '#334155' }}>
+                <span style={{ fontWeight: '700', fontSize: '0.9rem', color: '#e2e8f0' }}>
                   Kitchen & Plate Hygiene
                 </span>
-                <span style={{ fontWeight: '700', color: '#ea580c' }}>{hygieneRating} / 5</span>
+                <span style={{ fontWeight: '700', color: '#fef08a' }}>{hygieneRating} / 5</span>
               </div>
               <StarRating
                 rating={hygieneRating}
@@ -372,17 +375,17 @@ export const SubmitFeedback = () => {
             {/* Quantity Rating */}
             <div
               style={{
-                backgroundColor: '#f8fafc',
+                backgroundColor: '#131418',
                 padding: '16px 20px',
                 borderRadius: '14px',
-                border: '1px solid #e2e8f0',
+                border: '1px solid #22252e',
               }}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                <span style={{ fontWeight: '700', fontSize: '0.9rem', color: '#334155' }}>
+                <span style={{ fontWeight: '700', fontSize: '0.9rem', color: '#e2e8f0' }}>
                   Portion Quantity
                 </span>
-                <span style={{ fontWeight: '700', color: '#ea580c' }}>{quantityRating} / 5</span>
+                <span style={{ fontWeight: '700', color: '#fef08a' }}>{quantityRating} / 5</span>
               </div>
               <StarRating
                 rating={quantityRating}
@@ -396,10 +399,10 @@ export const SubmitFeedback = () => {
 
         {/* Specific Food Issues Checklist */}
         <div>
-          <label style={{ display: 'block', fontSize: '1rem', fontWeight: '700', color: '#0f172a', marginBottom: '6px' }}>
+          <label style={{ display: 'block', fontSize: '1rem', fontWeight: '700', color: '#f8fafc', marginBottom: '6px' }}>
             What was the issue? (Select all that apply)
           </label>
-          <p style={{ margin: '0 0 14px 0', fontSize: '0.85rem', color: '#64748b' }}>
+          <p style={{ margin: '0 0 14px 0', fontSize: '0.85rem', color: '#94a3b8' }}>
             Helps mess authorities pinpoint kitchen faults quickly.
           </p>
 
@@ -423,9 +426,9 @@ export const SubmitFeedback = () => {
                     gap: '10px',
                     padding: '10px 14px',
                     borderRadius: '10px',
-                    border: `1px solid ${isSelected ? '#ea580c' : '#cbd5e1'}`,
-                    backgroundColor: isSelected ? '#fff7ed' : '#ffffff',
-                    color: isSelected ? '#9a3412' : '#334155',
+                    border: `1px solid ${isSelected ? '#fef08a' : '#2a2e39'}`,
+                    backgroundColor: isSelected ? '#2b2716' : '#131418',
+                    color: isSelected ? '#fef08a' : '#94a3b8',
                     fontWeight: isSelected ? '700' : '500',
                     fontSize: '0.875rem',
                     cursor: 'pointer',
@@ -434,9 +437,9 @@ export const SubmitFeedback = () => {
                   }}
                 >
                   {isSelected ? (
-                    <CheckSquare size={18} color="#ea580c" />
+                    <CheckSquare size={18} color="#fef08a" />
                   ) : (
-                    <Square size={18} color="#94a3b8" />
+                    <Square size={18} color="#64748b" />
                   )}
                   <span>{issue}</span>
                 </button>
@@ -447,7 +450,7 @@ export const SubmitFeedback = () => {
 
         {/* Comments Textarea */}
         <div>
-          <label style={{ display: 'block', fontSize: '1rem', fontWeight: '700', color: '#0f172a', marginBottom: '6px' }}>
+          <label style={{ display: 'block', fontSize: '1rem', fontWeight: '700', color: '#f8fafc', marginBottom: '6px' }}>
             Additional Comments / Suggestions
           </label>
           <textarea
@@ -460,7 +463,9 @@ export const SubmitFeedback = () => {
               width: '100%',
               padding: '12px 14px',
               borderRadius: '10px',
-              border: '1px solid #cbd5e1',
+              border: '1px solid #2a2e39',
+              backgroundColor: '#131418',
+              color: '#f8fafc',
               fontSize: '0.925rem',
               outline: 'none',
               boxSizing: 'border-box',
@@ -468,21 +473,21 @@ export const SubmitFeedback = () => {
               fontFamily: 'inherit',
             }}
           />
-          <div style={{ textAlign: 'right', fontSize: '0.75rem', color: '#94a3b8', marginTop: '4px' }}>
+          <div style={{ textAlign: 'right', fontSize: '0.75rem', color: '#64748b', marginTop: '4px' }}>
             {comment.length} / 500 characters
           </div>
         </div>
 
         {/* Action Button */}
-        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', borderTop: '1px solid #f1f5f9', paddingTop: '20px' }}>
+        <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', borderTop: '1px solid #262933', paddingTop: '20px' }}>
           <Link
             to="/student/dashboard"
             style={{
               padding: '12px 20px',
               borderRadius: '10px',
-              border: '1px solid #cbd5e1',
-              backgroundColor: '#ffffff',
-              color: '#475569',
+              border: '1px solid #2a2e39',
+              backgroundColor: '#181a20',
+              color: '#94a3b8',
               fontWeight: '600',
               fontSize: '0.925rem',
               textDecoration: 'none',
@@ -494,18 +499,18 @@ export const SubmitFeedback = () => {
             type="submit"
             disabled={submitting || !availability.isAvailable}
             style={{
-              backgroundColor: availability.isAvailable ? '#ea580c' : '#94a3b8',
-              color: '#ffffff',
+              backgroundColor: availability.isAvailable ? '#fef08a' : '#2b2e38',
+              color: availability.isAvailable ? '#0f1013' : '#64748b',
               border: 'none',
               padding: '12px 28px',
               borderRadius: '10px',
-              fontWeight: '700',
+              fontWeight: '800',
               fontSize: '0.95rem',
               cursor: submitting || !availability.isAvailable ? 'not-allowed' : 'pointer',
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              boxShadow: availability.isAvailable ? '0 4px 6px -1px rgba(234, 88, 12, 0.3)' : 'none',
+              boxShadow: availability.isAvailable ? '0 4px 14px rgba(254, 240, 138, 0.25)' : 'none',
               opacity: submitting ? 0.7 : 1,
             }}
           >

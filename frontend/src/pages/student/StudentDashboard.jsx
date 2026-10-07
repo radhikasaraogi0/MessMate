@@ -17,6 +17,7 @@ import {
   Sparkles,
   History,
   Lock,
+  ChevronRight,
 } from 'lucide-react';
 
 export const StudentDashboard = () => {
@@ -78,7 +79,7 @@ export const StudentDashboard = () => {
       {/* Welcome Banner Card */}
       <div
         style={{
-          background: 'linear-gradient(135deg, #ea580c 0%, #c2410c 100%)',
+          background: 'linear-gradient(135deg, #181a20 0%, #15161b 100%)',
           borderRadius: '20px',
           padding: '28px 32px',
           color: '#ffffff',
@@ -87,11 +88,12 @@ export const StudentDashboard = () => {
           alignItems: 'center',
           justifyContent: 'space-between',
           gap: '20px',
-          boxShadow: '0 10px 25px -5px rgba(234, 88, 12, 0.35)',
+          border: '1px solid #282c38',
+          boxShadow: '0 8px 24px rgba(0, 0, 0, 0.45)',
         }}
       >
         <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', opacity: 0.9, fontSize: '0.875rem', marginBottom: '6px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#fef08a', fontSize: '0.875rem', marginBottom: '6px', fontWeight: '600' }}>
             <Calendar size={16} />
             <span>{todayDateStr}</span>
           </div>
@@ -102,12 +104,13 @@ export const StudentDashboard = () => {
               fontWeight: '800',
               margin: '0 0 6px 0',
               letterSpacing: '-0.02em',
+              color: '#f8fafc',
             }}
           >
             {getGreeting()}, {user?.name?.split(' ')[0]} 👋
           </h1>
-          <p style={{ margin: 0, opacity: 0.92, fontSize: '0.95rem' }}>
-            Mess: <strong>{user?.messId?.name || 'Assigned Mess'}</strong> {user?.messId?.area ? `(${user?.messId?.area})` : ''} &bull; Room <strong>{user?.roomNumber}</strong>
+          <p style={{ margin: 0, color: '#94a3b8', fontSize: '0.95rem' }}>
+            Mess: <strong style={{ color: '#fef08a' }}>{user?.messId?.name || 'Assigned Mess'}</strong> {user?.messId?.area ? `(${user?.messId?.area})` : ''} &bull; Room <strong>{user?.roomNumber}</strong>
           </p>
         </div>
 
@@ -118,14 +121,14 @@ export const StudentDashboard = () => {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              backgroundColor: '#ffffff',
-              color: '#c2410c',
+              backgroundColor: '#fef08a',
+              color: '#0f1013',
               padding: '12px 24px',
               borderRadius: '12px',
               fontWeight: '700',
               fontSize: '0.95rem',
               textDecoration: 'none',
-              boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+              boxShadow: '0 4px 12px rgba(254, 240, 138, 0.25)',
               transition: 'transform 0.15s ease',
             }}
           >
@@ -138,14 +141,14 @@ export const StudentDashboard = () => {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              backgroundColor: 'rgba(255, 255, 255, 0.15)',
-              color: '#ffffff',
+              backgroundColor: '#20232b',
+              color: '#f8fafc',
               padding: '12px 20px',
               borderRadius: '12px',
               fontWeight: '600',
               fontSize: '0.95rem',
               textDecoration: 'none',
-              border: '1px solid rgba(255, 255, 255, 0.3)',
+              border: '1px solid #313644',
             }}
           >
             <span>View Full Menu</span>
@@ -153,138 +156,193 @@ export const StudentDashboard = () => {
         </div>
       </div>
 
-      {/* Stats Summary Grid */}
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-          gap: '18px',
-        }}
-      >
-        {/* Your Feedback Submissions */}
-        <div
-          style={{
-            backgroundColor: '#ffffff',
-            borderRadius: '16px',
-            padding: '20px 24px',
-            border: '1px solid #e2e8f0',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '16px',
-          }}
-        >
-          <div
-            style={{
-              width: '50px',
-              height: '50px',
-              borderRadius: '12px',
-              backgroundColor: '#ffedd5',
-              color: '#ea580c',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <History size={26} />
-          </div>
-          <div>
-            <div style={{ fontSize: '0.8rem', fontWeight: '600', color: '#64748b', textTransform: 'uppercase' }}>
-              Your Submissions
-            </div>
-            <div style={{ fontSize: '1.75rem', fontWeight: '800', color: '#0f172a' }}>
-              {summary.totalSubmissions}
-            </div>
-          </div>
-        </div>
+      {/* Stats Summary Grid - Styled to match pastel reference cards */}
+      {(() => {
+        const activeMeal = todayMeals.find((m) => m.timingStatus === 'serving' || m.isFeedbackOpen);
 
-        {/* Your Average Rating */}
-        <div
-          style={{
-            backgroundColor: '#ffffff',
-            borderRadius: '16px',
-            padding: '20px 24px',
-            border: '1px solid #e2e8f0',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '16px',
-          }}
-        >
+        return (
           <div
             style={{
-              width: '50px',
-              height: '50px',
-              borderRadius: '12px',
-              backgroundColor: '#fef3c7',
-              color: '#d97706',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+              gap: '18px',
             }}
           >
-            <Star size={26} fill="#d97706" />
-          </div>
-          <div>
-            <div style={{ fontSize: '0.8rem', fontWeight: '600', color: '#64748b', textTransform: 'uppercase' }}>
-              Your Avg Rating
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ fontSize: '1.75rem', fontWeight: '800', color: '#0f172a' }}>
-                {summary.avgRating > 0 ? summary.avgRating.toFixed(1) : 'N/A'}
-              </span>
-              {summary.avgRating > 0 && <Star size={20} fill="#f59e0b" color="#f59e0b" />}
-            </div>
-          </div>
-        </div>
+            {/* Box 1: Your Average Rating - Warm Pastel Yellow */}
+            <Link
+              to="/student/history"
+              style={{
+                backgroundColor: '#fed066',
+                borderRadius: '20px',
+                padding: '22px 24px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                boxShadow: '0 8px 24px rgba(254, 208, 102, 0.25)',
+                textDecoration: 'none',
+                transition: 'transform 0.15s ease, box-shadow 0.15s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 12px 28px rgba(254, 208, 102, 0.35)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 8px 24px rgba(254, 208, 102, 0.25)';
+              }}
+            >
+              <div>
+                <div style={{ fontSize: '0.92rem', fontWeight: '700', color: '#181a20', marginBottom: '6px' }}>
+                  Your Average Rating
+                </div>
+                <div style={{ fontSize: '2rem', fontWeight: '800', color: '#0f1013', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                  {summary.avgRating > 0 ? (
+                    <>
+                      <span>{summary.avgRating.toFixed(1)}</span>
+                      <span style={{ fontSize: '1.45rem', fontWeight: '700', color: '#3c3016' }}> / 5.0</span>
+                    </>
+                  ) : (
+                    <span style={{ fontSize: '1.75rem', fontWeight: '800' }}>N/A</span>
+                  )}
+                </div>
+                <div style={{ fontSize: '0.78rem', fontWeight: '600', color: '#3c3016', marginTop: '4px' }}>
+                  {summary.totalSubmissions > 0 ? 'Your personal review average' : 'No feedback submitted yet'}
+                </div>
+              </div>
+              <div
+                style={{
+                  width: '42px',
+                  height: '42px',
+                  borderRadius: '50%',
+                  backgroundColor: '#0f1013',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#ffffff',
+                  flexShrink: 0,
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
+                }}
+              >
+                <ChevronRight size={20} strokeWidth={2.6} />
+              </div>
+            </Link>
 
-        {/* Today's Meals Count */}
-        <div
-          style={{
-            backgroundColor: '#ffffff',
-            borderRadius: '16px',
-            padding: '20px 24px',
-            border: '1px solid #e2e8f0',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '16px',
-          }}
-        >
-          <div
-            style={{
-              width: '50px',
-              height: '50px',
-              borderRadius: '12px',
-              backgroundColor: '#e0f2fe',
-              color: '#0284c7',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
-            <Utensils size={26} />
+            {/* Box 2: Meals Planned Today - Soft Pastel Lavender */}
+            <Link
+              to="/student/menu"
+              style={{
+                backgroundColor: '#d8b4fe',
+                borderRadius: '20px',
+                padding: '22px 24px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                boxShadow: '0 8px 24px rgba(216, 180, 254, 0.25)',
+                textDecoration: 'none',
+                transition: 'transform 0.15s ease, box-shadow 0.15s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 12px 28px rgba(216, 180, 254, 0.35)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 8px 24px rgba(216, 180, 254, 0.25)';
+              }}
+            >
+              <div>
+                <div style={{ fontSize: '0.92rem', fontWeight: '700', color: '#181a20', marginBottom: '6px' }}>
+                  Meals Planned Today
+                </div>
+                <div style={{ fontSize: '2rem', fontWeight: '800', color: '#0f1013', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                  {todayMeals.length}
+                </div>
+                <div style={{ fontSize: '0.78rem', fontWeight: '600', color: '#3b0764', marginTop: '4px' }}>
+                  {todayMeals.length > 0 ? `${todayMeals.length} meals on daily schedule` : 'No meals scheduled'}
+                </div>
+              </div>
+              <div
+                style={{
+                  width: '42px',
+                  height: '42px',
+                  borderRadius: '50%',
+                  backgroundColor: '#0f1013',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#ffffff',
+                  flexShrink: 0,
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
+                }}
+              >
+                <ChevronRight size={20} strokeWidth={2.6} />
+              </div>
+            </Link>
+
+            {/* Box 3: Your Submissions - Soft Pastel Lime */}
+            <Link
+              to="/student/history"
+              style={{
+                backgroundColor: '#bef264',
+                borderRadius: '20px',
+                padding: '22px 24px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                boxShadow: '0 8px 24px rgba(190, 242, 100, 0.25)',
+                textDecoration: 'none',
+                transition: 'transform 0.15s ease, box-shadow 0.15s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 12px 28px rgba(190, 242, 100, 0.35)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 8px 24px rgba(190, 242, 100, 0.25)';
+              }}
+            >
+              <div>
+                <div style={{ fontSize: '0.92rem', fontWeight: '700', color: '#181a20', marginBottom: '6px' }}>
+                  Your Submissions
+                </div>
+                <div style={{ fontSize: '2rem', fontWeight: '800', color: '#0f1013', letterSpacing: '-0.02em', lineHeight: 1 }}>
+                  {summary.totalSubmissions || 0}
+                </div>
+                <div style={{ fontSize: '0.78rem', fontWeight: '600', color: '#273f08', marginTop: '4px' }}>
+                  {summary.totalSubmissions === 1 ? '1 review submitted' : `${summary.totalSubmissions || 0} reviews submitted`}
+                </div>
+              </div>
+              <div
+                style={{
+                  width: '42px',
+                  height: '42px',
+                  borderRadius: '50%',
+                  backgroundColor: '#0f1013',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#ffffff',
+                  flexShrink: 0,
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.25)',
+                }}
+              >
+                <ChevronRight size={20} strokeWidth={2.6} />
+              </div>
+            </Link>
           </div>
-          <div>
-            <div style={{ fontSize: '0.8rem', fontWeight: '600', color: '#64748b', textTransform: 'uppercase' }}>
-              Meals Planned Today
-            </div>
-            <div style={{ fontSize: '1.75rem', fontWeight: '800', color: '#0f172a' }}>
-              {todayMeals.length}
-            </div>
-          </div>
-        </div>
-      </div>
+        );
+      })()}
 
       {/* Today's Menu Section */}
       <div>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '18px' }}>
           <div>
-            <h2 style={{ fontFamily: "'Outfit', sans-serif", fontSize: '1.35rem', fontWeight: '700', color: '#0f172a', margin: '0 0 4px 0' }}>
+            <h2 style={{ fontFamily: "'Outfit', sans-serif", fontSize: '1.5rem', fontWeight: '800', color: '#f8fafc', margin: '0 0 4px 0', letterSpacing: '-0.02em' }}>
               Today's Mess Menu
             </h2>
-            <p style={{ margin: 0, fontSize: '0.875rem', color: '#64748b' }}>
-              Fresh food schedule and student average scores for each meal
+            <p style={{ margin: 0, fontSize: '0.875rem', color: '#94a3b8' }}>
+              Today the mess menu is in the hostel mess and provides fresh daily options.
             </p>
           </div>
           <Link
@@ -292,12 +350,15 @@ export const StudentDashboard = () => {
             style={{
               fontSize: '0.875rem',
               fontWeight: '600',
-              color: '#ea580c',
+              color: '#94a3b8',
               textDecoration: 'none',
               display: 'flex',
               alignItems: 'center',
-              gap: '4px',
+              gap: '6px',
+              transition: 'color 0.15s ease',
             }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = '#fef08a')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = '#94a3b8')}
           >
             <span>Weekly Schedule</span>
             <ArrowRight size={16} />
@@ -313,134 +374,235 @@ export const StudentDashboard = () => {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '18px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+              gap: '16px',
             }}
           >
-            {todayMeals.map((meal) => (
-              <div
-                key={meal._id}
-                style={{
-                  backgroundColor: '#ffffff',
-                  borderRadius: '16px',
-                  padding: '22px',
-                  border: '1px solid #e2e8f0',
-                  boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'space-between',
-                  transition: 'transform 0.15s ease, box-shadow 0.15s ease',
-                }}
-              >
-                <div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      <Badge mealType={meal.mealType} size="md">
-                        {meal.mealType}
-                      </Badge>
-                      {meal.timingStatus === 'serving' ? (
-                        <span
-                          style={{
-                            fontSize: '0.72rem',
-                            fontWeight: '700',
-                            color: '#15803d',
-                            backgroundColor: '#dcfce7',
-                            padding: '2px 8px',
-                            borderRadius: '9999px',
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            gap: '4px',
-                          }}
-                        >
-                          <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#16a34a' }} />
-                          Serving Now
-                        </span>
-                      ) : !meal.isFeedbackOpen && (
-                        <span
-                          style={{
-                            fontSize: '0.72rem',
-                            fontWeight: '700',
-                            color: '#b45309',
-                            backgroundColor: '#fef3c7',
-                            padding: '2px 8px',
-                            borderRadius: '9999px',
-                          }}
-                        >
-                          Opens {meal.opensAt}
-                        </span>
-                      )}
-                    </div>
-                    {meal.avgRating ? (
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                        <StarRating rating={meal.avgRating} size={15} showLabel={true} />
-                        <span style={{ fontSize: '0.72rem', color: '#94a3b8' }}>
-                          ({meal.feedbackCount})
-                        </span>
-                      </div>
-                    ) : (
-                      <span style={{ fontSize: '0.75rem', color: '#94a3b8', fontStyle: 'italic' }}>
-                        No ratings yet
-                      </span>
-                    )}
-                  </div>
+            {todayMeals.map((meal, index) => {
+              // Parse meal items into an array if they are comma-separated or list
+              let itemList = [];
+              if (Array.isArray(meal.items)) {
+                itemList = meal.items.flatMap((item) =>
+                  typeof item === 'string'
+                    ? item.split(',').map((s) => s.trim()).filter(Boolean)
+                    : [item]
+                );
+              } else if (typeof meal.items === 'string') {
+                itemList = meal.items.split(',').map((s) => s.trim()).filter(Boolean);
+              }
 
-                  <h3 style={{ fontSize: '1.05rem', fontWeight: '700', color: '#1e293b', margin: '0 0 10px 0' }}>
-                    {meal.items?.join(', ')}
-                  </h3>
+              // Determine timing pill
+              const isServing = meal.timingStatus === 'serving' || meal.isFeedbackOpen;
+              const opensText = meal.opensAt ? `Opens ${meal.opensAt}` : null;
 
-                  {meal.description && (
-                    <p style={{ fontSize: '0.85rem', color: '#64748b', margin: '0 0 16px 0', lineHeight: 1.45 }}>
-                      {meal.description}
-                    </p>
-                  )}
-                </div>
+              // Find first locked meal index to display full unlock text vs compact lock icon
+              const firstLockedIndex = todayMeals.findIndex((m) => !m.isFeedbackOpen);
+              const isFirstLockedMeal = index === firstLockedIndex;
 
-                <div style={{ paddingTop: '12px', borderTop: '1px solid #f1f5f9', marginTop: '12px' }}>
-                  {meal.isFeedbackOpen ? (
-                    <Link
-                      to={`/student/feedback?mealType=${meal.mealType}&date=${meal.date}`}
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '6px',
-                        padding: '9px 14px',
-                        borderRadius: '8px',
-                        backgroundColor: '#fff7ed',
-                        color: '#ea580c',
-                        border: '1px solid #fed7aa',
-                        fontSize: '0.875rem',
-                        fontWeight: '700',
-                        textDecoration: 'none',
-                      }}
-                    >
-                      <MessageSquarePlus size={16} />
-                      <span>Rate {meal.mealType}</span>
-                    </Link>
-                  ) : (
+              // Dynamic community rating calculated strictly from feedback submissions
+              const hasRating = meal.avgRating && Number(meal.avgRating) > 0;
+              const displayRating = hasRating ? Number(meal.avgRating).toFixed(1) : 'N/A';
+
+              return (
+                <div
+                  key={meal._id}
+                  style={{
+                    backgroundColor: '#181b24',
+                    borderRadius: '16px',
+                    padding: '20px',
+                    border: '1px solid #262b3a',
+                    boxShadow: '0 8px 24px rgba(0,0,0,0.35)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    minHeight: '380px',
+                    transition: 'border-color 0.15s ease',
+                  }}
+                >
+                  <div>
+                    {/* Top Header: Badge on Left & Single Star + Numeric Rating on Right */}
                     <div
                       style={{
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'center',
-                        gap: '6px',
-                        padding: '9px 14px',
-                        borderRadius: '8px',
-                        backgroundColor: '#f8fafc',
-                        color: '#64748b',
-                        border: '1px solid #e2e8f0',
-                        fontSize: '0.825rem',
-                        fontWeight: '600',
+                        justifyContent: 'space-between',
+                        marginBottom: '14px',
                       }}
-                      title={`Feedback will open when ${meal.mealType} begins at ${meal.opensAt}`}
                     >
-                      <Lock size={14} color="#94a3b8" />
-                      <span>Feedback Unlocks at {meal.opensAt || 'Meal Time'}</span>
+                      <Badge mealType={meal.mealType} size="md">
+                        {meal.mealType}
+                      </Badge>
+
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
+                        <Star size={17} fill={hasRating ? '#fbbf24' : 'none'} color={hasRating ? '#fbbf24' : '#64748b'} />
+                        <span style={{ fontSize: '0.95rem', fontWeight: '800', color: hasRating ? '#f8fafc' : '#94a3b8' }}>
+                          {displayRating}
+                        </span>
+                      </div>
                     </div>
-                  )}
+
+                    {/* Opens Timing Capsule or Subtitle */}
+                    {isServing ? (
+                      <div
+                        style={{
+                          fontSize: '0.85rem',
+                          fontWeight: '600',
+                          color: '#94a3b8',
+                          marginBottom: '14px',
+                        }}
+                      >
+                        {meal.description || 'Real mess meal'}
+                      </div>
+                    ) : opensText ? (
+                      <div style={{ marginBottom: '14px' }}>
+                        <span
+                          style={{
+                            fontSize: '0.75rem',
+                            fontWeight: '600',
+                            color: '#cbd5e1',
+                            backgroundColor: '#222736',
+                            border: '1px solid #2e3547',
+                            padding: '3px 10px',
+                            borderRadius: '9999px',
+                            display: 'inline-block',
+                          }}
+                        >
+                          {opensText}
+                        </span>
+                      </div>
+                    ) : (
+                      <div
+                        style={{
+                          fontSize: '0.85rem',
+                          fontWeight: '600',
+                          color: '#94a3b8',
+                          marginBottom: '14px',
+                        }}
+                      >
+                        {meal.description || 'Real mess meal'}
+                      </div>
+                    )}
+
+                    {/* Bulleted List of Dishes */}
+                    <div style={{ marginBottom: '16px' }}>
+                      <ul
+                        style={{
+                          margin: 0,
+                          padding: 0,
+                          listStyle: 'none',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          gap: '10px',
+                        }}
+                      >
+                        {itemList && itemList.length > 0 ? (
+                          itemList.map((dish, idx) => (
+                            <li
+                              key={idx}
+                              style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '8px',
+                                fontSize: '0.875rem',
+                                color: '#cbd5e1',
+                                fontWeight: '500',
+                                lineHeight: 1.35,
+                              }}
+                            >
+                              <span
+                                style={{
+                                  width: '4px',
+                                  height: '4px',
+                                  borderRadius: '50%',
+                                  backgroundColor: '#94a3b8',
+                                  flexShrink: 0,
+                                }}
+                              />
+                              <span>{dish}</span>
+                            </li>
+                          ))
+                        ) : (
+                          <li
+                            style={{
+                              fontSize: '0.85rem',
+                              color: '#64748b',
+                              fontStyle: 'italic',
+                            }}
+                          >
+                            Menu items will be updated shortly
+                          </li>
+                        )}
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* Bottom Action Button */}
+                  <div style={{ marginTop: 'auto', paddingTop: '14px' }}>
+                    {meal.isFeedbackOpen ? (
+                      <Link
+                        to={`/student/feedback?mealType=${meal.mealType}&date=${meal.date}`}
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          padding: '11px 16px',
+                          borderRadius: '12px',
+                          backgroundColor: '#fef08a',
+                          color: '#0f1013',
+                          fontSize: '0.875rem',
+                          fontWeight: '800',
+                          textDecoration: 'none',
+                          boxShadow: '0 4px 14px rgba(254, 240, 138, 0.25)',
+                          transition: 'transform 0.15s ease, filter 0.15s ease',
+                        }}
+                      >
+                        <span>Rate {meal.mealType}</span>
+                      </Link>
+                    ) : isFirstLockedMeal ? (
+                      <div
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'space-between',
+                          padding: '10px 14px',
+                          borderRadius: '12px',
+                          backgroundColor: '#1a1e2b',
+                          border: '1px solid #2e3547',
+                          color: '#64748b',
+                          fontSize: '0.8rem',
+                          fontWeight: '600',
+                          cursor: 'not-allowed',
+                          textAlign: 'center',
+                        }}
+                        title={`Feedback will open at ${meal.opensAt || 'scheduled time'}`}
+                      >
+                        <span style={{ flex: 1, textAlign: 'center' }}>
+                          Feedback Unlocks at {meal.opensAt || '12:30 PM'}
+                        </span>
+                        <Lock size={15} color="#64748b" style={{ flexShrink: 0, marginLeft: '6px' }} />
+                      </div>
+                    ) : (
+                      <div
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          padding: '11px 16px',
+                          borderRadius: '12px',
+                          backgroundColor: '#1a1e2b',
+                          border: '1px solid #2e3547',
+                          color: '#64748b',
+                          cursor: 'not-allowed',
+                        }}
+                        title={`Feedback unlocks at ${meal.opensAt || 'scheduled time'}`}
+                      >
+                        <Lock size={16} color="#64748b" />
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
       </div>
@@ -449,10 +611,10 @@ export const StudentDashboard = () => {
       <div>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
           <div>
-            <h2 style={{ fontFamily: "'Outfit', sans-serif", fontSize: '1.35rem', fontWeight: '700', color: '#0f172a', margin: '0 0 4px 0' }}>
+            <h2 style={{ fontFamily: "'Outfit', sans-serif", fontSize: '1.35rem', fontWeight: '700', color: '#f8fafc', margin: '0 0 4px 0' }}>
               Your Recent Feedback
             </h2>
-            <p style={{ margin: 0, fontSize: '0.875rem', color: '#64748b' }}>
+            <p style={{ margin: 0, fontSize: '0.875rem', color: '#94a3b8' }}>
               Past reviews submitted by your account
             </p>
           </div>
@@ -461,7 +623,7 @@ export const StudentDashboard = () => {
             style={{
               fontSize: '0.875rem',
               fontWeight: '600',
-              color: '#ea580c',
+              color: '#fef08a',
               textDecoration: 'none',
               display: 'flex',
               alignItems: 'center',
@@ -484,12 +646,12 @@ export const StudentDashboard = () => {
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '8px',
-                  backgroundColor: '#ea580c',
-                  color: '#ffffff',
+                  backgroundColor: '#fef08a',
+                  color: '#0f1013',
                   padding: '10px 18px',
                   borderRadius: '10px',
                   fontSize: '0.875rem',
-                  fontWeight: '600',
+                  fontWeight: '700',
                   textDecoration: 'none',
                 }}
               >
@@ -501,11 +663,11 @@ export const StudentDashboard = () => {
         ) : (
           <div
             style={{
-              backgroundColor: '#ffffff',
+              backgroundColor: '#181a20',
               borderRadius: '16px',
-              border: '1px solid #e2e8f0',
+              border: '1px solid #262933',
               overflow: 'hidden',
-              boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
             }}
           >
             {recentFeedback.map((fb, idx) => (
@@ -513,7 +675,7 @@ export const StudentDashboard = () => {
                 key={fb._id}
                 style={{
                   padding: '18px 24px',
-                  borderBottom: idx < recentFeedback.length - 1 ? '1px solid #f1f5f9' : 'none',
+                  borderBottom: idx < recentFeedback.length - 1 ? '1px solid #232630' : 'none',
                   display: 'flex',
                   flexWrap: 'wrap',
                   alignItems: 'center',
@@ -528,11 +690,11 @@ export const StudentDashboard = () => {
                   <div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                       <StarRating rating={fb.averageRating} size={15} showLabel={true} />
-                      <span style={{ fontSize: '0.78rem', color: '#94a3b8' }}>&bull;</span>
-                      <span style={{ fontSize: '0.825rem', color: '#64748b' }}>{fb.date}</span>
+                      <span style={{ fontSize: '0.78rem', color: '#64748b' }}>&bull;</span>
+                      <span style={{ fontSize: '0.825rem', color: '#94a3b8' }}>{fb.date}</span>
                     </div>
                     {fb.comment && (
-                      <p style={{ margin: '4px 0 0 0', fontSize: '0.875rem', color: '#334155' }}>
+                      <p style={{ margin: '4px 0 0 0', fontSize: '0.875rem', color: '#f8fafc' }}>
                         "{fb.comment}"
                       </p>
                     )}
@@ -545,9 +707,9 @@ export const StudentDashboard = () => {
                       style={{
                         padding: '3px 10px',
                         borderRadius: '6px',
-                        backgroundColor: '#fef2f2',
-                        color: '#b91c1c',
-                        border: '1px solid #fecaca',
+                        backgroundColor: '#30161a',
+                        color: '#fca5a5',
+                        border: '1px solid #4a2126',
                         fontSize: '0.75rem',
                         fontWeight: '600',
                       }}
@@ -559,9 +721,9 @@ export const StudentDashboard = () => {
                       style={{
                         padding: '3px 10px',
                         borderRadius: '6px',
-                        backgroundColor: '#f0fdf4',
-                        color: '#15803d',
-                        border: '1px solid #bbf7d0',
+                        backgroundColor: '#122b1c',
+                        color: '#86efac',
+                        border: '1px solid #1f4f32',
                         fontSize: '0.75rem',
                         fontWeight: '600',
                       }}

@@ -28,14 +28,14 @@ export const Navbar = () => {
     display: 'flex',
     alignItems: 'center',
     gap: '6px',
-    padding: '8px 14px',
-    borderRadius: '8px',
+    padding: '7px 14px',
+    borderRadius: '10px',
     textDecoration: 'none',
-    fontSize: '0.9rem',
+    fontSize: '0.875rem',
     fontWeight: '600',
     transition: 'all 0.15s ease',
-    color: isActive ? '#ea580c' : '#475569',
-    backgroundColor: isActive ? '#fff7ed' : 'transparent',
+    color: isActive ? '#0f1013' : '#94a3b8',
+    backgroundColor: isActive ? '#fef08a' : 'transparent',
   });
 
   return (
@@ -44,9 +44,9 @@ export const Navbar = () => {
         position: 'sticky',
         top: 0,
         zIndex: 50,
-        backgroundColor: '#ffffff',
-        borderBottom: '1px solid #e2e8f0',
-        boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.05)',
+        backgroundColor: '#16181d',
+        borderBottom: '1px solid #232731',
+        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.4)',
       }}
     >
       <div
@@ -163,10 +163,10 @@ export const Navbar = () => {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '10px',
-                padding: '6px 12px',
-                borderRadius: '8px',
-                backgroundColor: '#f8fafc',
-                border: '1px solid #e2e8f0',
+                padding: '5px 12px',
+                borderRadius: '10px',
+                backgroundColor: '#1b1d24',
+                border: '1px solid #292d38',
                 textDecoration: 'none',
               }}
             >
@@ -175,24 +175,24 @@ export const Navbar = () => {
                   width: '32px',
                   height: '32px',
                   borderRadius: '50%',
-                  backgroundColor: isAdmin ? '#f3e8ff' : '#ffedd5',
-                  color: isAdmin ? '#7e22ce' : '#c2410c',
+                  backgroundColor: isAdmin ? '#c4b5fd' : '#fef08a',
+                  color: '#0f1013',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontWeight: '700',
-                  fontSize: '0.85rem',
+                  fontWeight: '800',
+                  fontSize: '0.875rem',
                 }}
               >
-                {isAdmin ? <ShieldCheck size={18} /> : user?.name?.charAt(0).toUpperCase()}
+                {isAdmin ? <ShieldCheck size={18} /> : (user?.name?.charAt(0).toUpperCase() || 'U')}
               </div>
               <div style={{ textAlign: 'left', lineHeight: 1.2 }}>
                 <span
                   style={{
                     display: 'block',
-                    fontSize: '0.875rem',
-                    fontWeight: '600',
-                    color: '#0f172a',
+                    fontSize: '0.85rem',
+                    fontWeight: '700',
+                    color: '#f8fafc',
                   }}
                 >
                   {user?.name?.split(' ')[0]}
@@ -200,7 +200,7 @@ export const Navbar = () => {
                 <span
                   style={{
                     fontSize: '0.72rem',
-                    color: '#ea580c',
+                    color: '#fef08a',
                     fontWeight: '600',
                     display: 'block',
                     maxWidth: '180px',
@@ -218,27 +218,27 @@ export const Navbar = () => {
               type="button"
               onClick={handleLogout}
               style={{
-                background: '#f1f5f9',
-                border: 'none',
+                background: '#1f222b',
+                border: '1px solid #2b2f3c',
                 padding: '8px 12px',
                 borderRadius: '8px',
                 cursor: 'pointer',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '6px',
-                color: '#64748b',
+                color: '#94a3b8',
                 fontWeight: '600',
                 fontSize: '0.85rem',
                 transition: 'all 0.15s ease',
               }}
               title="Logout"
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#fee2e2';
-                e.currentTarget.style.color = '#dc2626';
+                e.currentTarget.style.backgroundColor = '#ef4444';
+                e.currentTarget.style.color = '#ffffff';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#f1f5f9';
-                e.currentTarget.style.color = '#64748b';
+                e.currentTarget.style.backgroundColor = '#1f222b';
+                e.currentTarget.style.color = '#94a3b8';
               }}
             >
               <LogOut size={16} />

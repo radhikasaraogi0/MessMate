@@ -80,24 +80,24 @@ export const AdminDashboard = () => {
     return <LoadingSpinner message="Calculating dynamic mess analytics..." />;
   }
 
-  // Bar colors for Meal Types
+  // Bar colors for Meal Types (Polysure signature pastels)
   const MEAL_BAR_COLORS = {
-    Breakfast: '#f59e0b',
-    Lunch: '#0284c7',
-    Snacks: '#ea580c',
-    Dinner: '#9333ea',
+    Breakfast: '#fef08a',
+    Lunch: '#c4b5fd',
+    Snacks: '#fed7aa',
+    Dinner: '#bbf7d0',
   };
 
   // Issue Bar colors
   const ISSUE_COLORS = [
-    '#ef4444',
-    '#f97316',
-    '#eab308',
-    '#84cc16',
-    '#06b6d4',
-    '#6366f1',
-    '#a855f7',
-    '#ec4899',
+    '#f87171',
+    '#fb923c',
+    '#facc15',
+    '#4ade80',
+    '#38bdf8',
+    '#818cf8',
+    '#c084fc',
+    '#f472b6',
   ];
 
   return (
@@ -120,9 +120,9 @@ export const AdminDashboard = () => {
                 fontWeight: '700',
                 padding: '3px 10px',
                 borderRadius: '6px',
-                backgroundColor: '#eff6ff',
-                color: '#1d4ed8',
-                border: '1px solid #bfdbfe',
+                backgroundColor: '#161c2e',
+                color: '#93c5fd',
+                border: '1px solid #23345d',
               }}
             >
               📍 {user?.messId?.name || 'Assigned Mess'} {user?.messId?.area ? `(${user?.messId?.area})` : ''}
@@ -133,13 +133,13 @@ export const AdminDashboard = () => {
               fontFamily: "'Outfit', sans-serif",
               fontSize: '2rem',
               fontWeight: '800',
-              color: '#0f172a',
+              color: '#f8fafc',
               margin: '0 0 6px 0',
             }}
           >
             Mess Authority Analytics Dashboard
           </h1>
-          <p style={{ margin: 0, color: '#64748b', fontSize: '0.95rem' }}>
+          <p style={{ margin: 0, color: '#94a3b8', fontSize: '0.95rem' }}>
             Live aggregation metrics, meal ratings breakdown, and student issue patterns
           </p>
         </div>
@@ -154,13 +154,13 @@ export const AdminDashboard = () => {
             gap: '8px',
             padding: '10px 18px',
             borderRadius: '10px',
-            backgroundColor: '#ffffff',
-            border: '1px solid #cbd5e1',
-            color: '#334155',
+            backgroundColor: '#181a20',
+            border: '1px solid #262933',
+            color: '#f8fafc',
             fontWeight: '600',
             fontSize: '0.875rem',
             cursor: refreshing ? 'not-allowed' : 'pointer',
-            boxShadow: '0 1px 2px rgba(0,0,0,0.05)',
+            boxShadow: '0 1px 3px rgba(0,0,0,0.3)',
           }}
         >
           <RefreshCw size={16} style={{ animation: refreshing ? 'spin 1s linear infinite' : 'none' }} />
@@ -181,24 +181,24 @@ export const AdminDashboard = () => {
         {/* Total Students */}
         <div
           style={{
-            backgroundColor: '#ffffff',
+            backgroundColor: '#181a20',
             borderRadius: '16px',
             padding: '24px',
-            border: '1px solid #e2e8f0',
-            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.02)',
+            border: '1px solid #262933',
+            boxShadow: '0 4px 20px -2px rgba(0, 0, 0, 0.3)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
           }}
         >
           <div>
-            <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#64748b', textTransform: 'uppercase', marginBottom: '6px' }}>
+            <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', marginBottom: '6px' }}>
               Total Students
             </div>
-            <div style={{ fontSize: '2rem', fontWeight: '800', color: '#0f172a' }}>
+            <div style={{ fontSize: '2rem', fontWeight: '800', color: '#f8fafc' }}>
               {overview?.totalStudents || 0}
             </div>
-            <div style={{ fontSize: '0.75rem', color: '#16a34a', fontWeight: '600', marginTop: '4px' }}>
+            <div style={{ fontSize: '0.75rem', color: '#bbf7d0', fontWeight: '600', marginTop: '4px' }}>
               Active hostel accounts
             </div>
           </div>
@@ -207,8 +207,8 @@ export const AdminDashboard = () => {
               width: '52px',
               height: '52px',
               borderRadius: '14px',
-              backgroundColor: '#e0f2fe',
-              color: '#0284c7',
+              backgroundColor: '#241f3d',
+              color: '#c4b5fd',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -221,24 +221,24 @@ export const AdminDashboard = () => {
         {/* Total Feedback */}
         <div
           style={{
-            backgroundColor: '#ffffff',
+            backgroundColor: '#181a20',
             borderRadius: '16px',
             padding: '24px',
-            border: '1px solid #e2e8f0',
-            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.02)',
+            border: '1px solid #262933',
+            boxShadow: '0 4px 20px -2px rgba(0, 0, 0, 0.3)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
           }}
         >
           <div>
-            <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#64748b', textTransform: 'uppercase', marginBottom: '6px' }}>
+            <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', marginBottom: '6px' }}>
               Total Feedback
             </div>
-            <div style={{ fontSize: '2rem', fontWeight: '800', color: '#0f172a' }}>
+            <div style={{ fontSize: '2rem', fontWeight: '800', color: '#f8fafc' }}>
               {overview?.totalFeedback?.toLocaleString() || 0}
             </div>
-            <div style={{ fontSize: '0.75rem', color: '#ea580c', fontWeight: '600', marginTop: '4px' }}>
+            <div style={{ fontSize: '0.75rem', color: '#fed7aa', fontWeight: '600', marginTop: '4px' }}>
               Logged submissions
             </div>
           </div>
@@ -247,8 +247,8 @@ export const AdminDashboard = () => {
               width: '52px',
               height: '52px',
               borderRadius: '14px',
-              backgroundColor: '#ffedd5',
-              color: '#ea580c',
+              backgroundColor: '#2b2015',
+              color: '#fed7aa',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -261,27 +261,27 @@ export const AdminDashboard = () => {
         {/* Average Rating */}
         <div
           style={{
-            backgroundColor: '#ffffff',
+            backgroundColor: '#181a20',
             borderRadius: '16px',
             padding: '24px',
-            border: '1px solid #e2e8f0',
-            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.02)',
+            border: '1px solid #262933',
+            boxShadow: '0 4px 20px -2px rgba(0, 0, 0, 0.3)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
           }}
         >
           <div>
-            <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#64748b', textTransform: 'uppercase', marginBottom: '6px' }}>
+            <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', marginBottom: '6px' }}>
               Average Rating
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ fontSize: '2rem', fontWeight: '800', color: '#0f172a' }}>
+              <span style={{ fontSize: '2rem', fontWeight: '800', color: '#fef08a' }}>
                 {overview?.averageRating ? overview.averageRating.toFixed(1) : '0.0'}
               </span>
-              <Star size={24} fill="#f59e0b" color="#f59e0b" />
+              <Star size={24} fill="#fbbf24" color="#fbbf24" />
             </div>
-            <div style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: '600', marginTop: '4px' }}>
+            <div style={{ fontSize: '0.75rem', color: '#94a3b8', fontWeight: '600', marginTop: '4px' }}>
               Across all meals
             </div>
           </div>
@@ -290,8 +290,8 @@ export const AdminDashboard = () => {
               width: '52px',
               height: '52px',
               borderRadius: '14px',
-              backgroundColor: '#fef3c7',
-              color: '#d97706',
+              backgroundColor: '#282315',
+              color: '#fef08a',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -304,24 +304,24 @@ export const AdminDashboard = () => {
         {/* Issues Reported */}
         <div
           style={{
-            backgroundColor: '#ffffff',
+            backgroundColor: '#181a20',
             borderRadius: '16px',
             padding: '24px',
-            border: '1px solid #e2e8f0',
-            boxShadow: '0 2px 4px rgba(0, 0, 0, 0.02)',
+            border: '1px solid #262933',
+            boxShadow: '0 4px 20px -2px rgba(0, 0, 0, 0.3)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
           }}
         >
           <div>
-            <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#64748b', textTransform: 'uppercase', marginBottom: '6px' }}>
+            <div style={{ fontSize: '0.8rem', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', marginBottom: '6px' }}>
               Issues Reported
             </div>
-            <div style={{ fontSize: '2rem', fontWeight: '800', color: '#dc2626' }}>
+            <div style={{ fontSize: '2rem', fontWeight: '800', color: '#f87171' }}>
               {overview?.totalIssues || 0}
             </div>
-            <div style={{ fontSize: '0.75rem', color: '#b91c1c', fontWeight: '600', marginTop: '4px' }}>
+            <div style={{ fontSize: '0.75rem', color: '#fca5a5', fontWeight: '600', marginTop: '4px' }}>
               Flagged food complaints
             </div>
           </div>
@@ -330,8 +330,8 @@ export const AdminDashboard = () => {
               width: '52px',
               height: '52px',
               borderRadius: '14px',
-              backgroundColor: '#fee2e2',
-              color: '#dc2626',
+              backgroundColor: '#2d1519',
+              color: '#f87171',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -347,19 +347,19 @@ export const AdminDashboard = () => {
         {/* Graph 1 – Average Rating by Meal (BAR CHART) */}
         <div
           style={{
-            backgroundColor: '#ffffff',
+            backgroundColor: '#181a20',
             borderRadius: '18px',
             padding: '24px',
-            border: '1px solid #e2e8f0',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
+            border: '1px solid #262933',
+            boxShadow: '0 4px 20px -2px rgba(0,0,0,0.3)',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
             <div>
-              <h3 style={{ margin: '0 0 4px 0', fontSize: '1.15rem', fontWeight: '700', color: '#0f172a' }}>
+              <h3 style={{ margin: '0 0 4px 0', fontSize: '1.15rem', fontWeight: '700', color: '#f8fafc' }}>
                 Average Rating by Meal
               </h3>
-              <p style={{ margin: 0, fontSize: '0.8rem', color: '#64748b' }}>
+              <p style={{ margin: 0, fontSize: '0.8rem', color: '#94a3b8' }}>
                 Comparative quality score across Breakfast, Lunch, Snacks, and Dinner
               </p>
             </div>
@@ -369,16 +369,16 @@ export const AdminDashboard = () => {
           <div style={{ width: '100%', height: '280px' }}>
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={mealRatings} margin={{ top: 10, right: 20, left: -10, bottom: 5 }}>
-                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
-                <XAxis dataKey="meal" stroke="#64748b" fontSize={12} tickLine={false} />
-                <YAxis domain={[0, 5]} stroke="#64748b" fontSize={12} tickLine={false} />
+                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#262933" />
+                <XAxis dataKey="meal" stroke="#94a3b8" fontSize={12} tickLine={false} />
+                <YAxis domain={[0, 5]} stroke="#94a3b8" fontSize={12} tickLine={false} />
                 <Tooltip
                   formatter={(val) => [`${val} ⭐`, 'Average Rating']}
-                  contentStyle={{ backgroundColor: '#0f172a', color: '#fff', borderRadius: '8px', border: 'none' }}
+                  contentStyle={{ backgroundColor: '#181a20', color: '#f8fafc', borderRadius: '8px', border: '1px solid #262933' }}
                 />
                 <Bar dataKey="averageRating" radius={[8, 8, 0, 0]}>
                   {mealRatings.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={MEAL_BAR_COLORS[entry.meal] || '#ea580c'} />
+                    <Cell key={`cell-${index}`} fill={MEAL_BAR_COLORS[entry.meal] || '#fef08a'} />
                   ))}
                 </Bar>
               </BarChart>
@@ -389,19 +389,19 @@ export const AdminDashboard = () => {
         {/* Graph 2 – Mess Rating Trend (LINE CHART) */}
         <div
           style={{
-            backgroundColor: '#ffffff',
+            backgroundColor: '#181a20',
             borderRadius: '18px',
             padding: '24px',
-            border: '1px solid #e2e8f0',
-            boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
+            border: '1px solid #262933',
+            boxShadow: '0 4px 20px -2px rgba(0,0,0,0.3)',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
             <div>
-              <h3 style={{ margin: '0 0 4px 0', fontSize: '1.15rem', fontWeight: '700', color: '#0f172a' }}>
+              <h3 style={{ margin: '0 0 4px 0', fontSize: '1.15rem', fontWeight: '700', color: '#f8fafc' }}>
                 Mess Rating Trend
               </h3>
-              <p style={{ margin: 0, fontSize: '0.8rem', color: '#64748b' }}>
+              <p style={{ margin: 0, fontSize: '0.8rem', color: '#94a3b8' }}>
                 Daily average student satisfaction rating over the past 7 days
               </p>
             </div>
@@ -411,22 +411,22 @@ export const AdminDashboard = () => {
           <div style={{ width: '100%', height: '280px' }}>
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={ratingTrend} margin={{ top: 10, right: 20, left: -10, bottom: 5 }}>
-                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f1f5f9" />
-                <XAxis dataKey="day" stroke="#64748b" fontSize={12} tickLine={false} />
-                <YAxis domain={[0, 5]} stroke="#64748b" fontSize={12} tickLine={false} />
+                <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#262933" />
+                <XAxis dataKey="day" stroke="#94a3b8" fontSize={12} tickLine={false} />
+                <YAxis domain={[0, 5]} stroke="#94a3b8" fontSize={12} tickLine={false} />
                 <Tooltip
                   formatter={(val, name, props) => [
                     `${val} ⭐ (${props.payload.count} reviews)`,
                     props.payload.displayDate,
                   ]}
-                  contentStyle={{ backgroundColor: '#0f172a', color: '#fff', borderRadius: '8px', border: 'none' }}
+                  contentStyle={{ backgroundColor: '#181a20', color: '#f8fafc', borderRadius: '8px', border: '1px solid #262933' }}
                 />
                 <Line
                   type="monotone"
                   dataKey="averageRating"
-                  stroke="#ea580c"
+                  stroke="#fef08a"
                   strokeWidth={3}
-                  dot={{ r: 5, fill: '#ea580c', stroke: '#ffffff', strokeWidth: 2 }}
+                  dot={{ r: 5, fill: '#fef08a', stroke: '#181a20', strokeWidth: 2 }}
                   activeDot={{ r: 7 }}
                 />
               </LineChart>
@@ -438,19 +438,19 @@ export const AdminDashboard = () => {
       {/* Graph 3 – Most Reported Food Issues (BAR CHART) */}
       <div
         style={{
-          backgroundColor: '#ffffff',
+          backgroundColor: '#181a20',
           borderRadius: '18px',
           padding: '24px',
-          border: '1px solid #e2e8f0',
-          boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
+          border: '1px solid #262933',
+          boxShadow: '0 4px 20px -2px rgba(0,0,0,0.3)',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '20px' }}>
           <div>
-            <h3 style={{ margin: '0 0 4px 0', fontSize: '1.15rem', fontWeight: '700', color: '#0f172a' }}>
+            <h3 style={{ margin: '0 0 4px 0', fontSize: '1.15rem', fontWeight: '700', color: '#f8fafc' }}>
               Most Reported Food Issues
             </h3>
-            <p style={{ margin: 0, fontSize: '0.8rem', color: '#64748b' }}>
+            <p style={{ margin: 0, fontSize: '0.8rem', color: '#94a3b8' }}>
               Frequency of reported complaints calculated dynamically from student feedback
             </p>
           </div>
@@ -464,12 +464,12 @@ export const AdminDashboard = () => {
               layout="vertical"
               margin={{ top: 5, right: 30, left: 60, bottom: 5 }}
             >
-              <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#f1f5f9" />
-              <XAxis type="number" stroke="#64748b" fontSize={12} tickLine={false} />
+              <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#262933" />
+              <XAxis type="number" stroke="#94a3b8" fontSize={12} tickLine={false} />
               <YAxis
                 dataKey="issue"
                 type="category"
-                stroke="#64748b"
+                stroke="#94a3b8"
                 fontSize={12}
                 tickLine={false}
                 width={100}
@@ -479,7 +479,7 @@ export const AdminDashboard = () => {
                   `${val} reports (${props.payload.percentage}% of issues)`,
                   'Frequency',
                 ]}
-                contentStyle={{ backgroundColor: '#0f172a', color: '#fff', borderRadius: '8px', border: 'none' }}
+                contentStyle={{ backgroundColor: '#181a20', color: '#f8fafc', borderRadius: '8px', border: '1px solid #262933' }}
               />
               <Bar dataKey="count" radius={[0, 8, 8, 0]}>
                 {issuesData.map((entry, index) => (
@@ -494,19 +494,19 @@ export const AdminDashboard = () => {
       {/* Recent Feedback Feed Preview */}
       <div
         style={{
-          backgroundColor: '#ffffff',
+          backgroundColor: '#181a20',
           borderRadius: '18px',
           padding: '24px',
-          border: '1px solid #e2e8f0',
-          boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
+          border: '1px solid #262933',
+          boxShadow: '0 4px 20px -2px rgba(0,0,0,0.3)',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
           <div>
-            <h3 style={{ margin: '0 0 4px 0', fontSize: '1.15rem', fontWeight: '700', color: '#0f172a' }}>
+            <h3 style={{ margin: '0 0 4px 0', fontSize: '1.15rem', fontWeight: '700', color: '#f8fafc' }}>
               Recent Student Submissions
             </h3>
-            <p style={{ margin: 0, fontSize: '0.85rem', color: '#64748b' }}>
+            <p style={{ margin: 0, fontSize: '0.85rem', color: '#94a3b8' }}>
               Latest reviews submitted across university blocks
             </p>
           </div>
@@ -515,7 +515,7 @@ export const AdminDashboard = () => {
             style={{
               fontSize: '0.85rem',
               fontWeight: '700',
-              color: '#ea580c',
+              color: '#fef08a',
               textDecoration: 'none',
               display: 'flex',
               alignItems: 'center',
@@ -534,8 +534,8 @@ export const AdminDashboard = () => {
               style={{
                 padding: '14px 18px',
                 borderRadius: '12px',
-                backgroundColor: '#f8fafc',
-                border: '1px solid #f1f5f9',
+                backgroundColor: '#131418',
+                border: '1px solid #22252e',
                 display: 'flex',
                 flexWrap: 'wrap',
                 alignItems: 'center',
@@ -549,16 +549,16 @@ export const AdminDashboard = () => {
                 </Badge>
                 <div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <span style={{ fontWeight: '700', fontSize: '0.875rem', color: '#0f172a' }}>
+                    <span style={{ fontWeight: '700', fontSize: '0.875rem', color: '#f8fafc' }}>
                       {item.studentId?.name || 'Resident Student'}
                     </span>
-                    <span style={{ fontSize: '0.75rem', color: '#64748b' }}>
+                    <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>
                       ({item.studentId?.hostel || 'Hostel'} - Rm {item.studentId?.roomNumber || 'N/A'})
                     </span>
-                    <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>&bull; {item.date}</span>
+                    <span style={{ fontSize: '0.75rem', color: '#64748b' }}>&bull; {item.date}</span>
                   </div>
                   {item.comment && (
-                    <p style={{ margin: '4px 0 0 0', fontSize: '0.825rem', color: '#475569' }}>
+                    <p style={{ margin: '4px 0 0 0', fontSize: '0.825rem', color: '#cbd5e1' }}>
                       "{item.comment}"
                     </p>
                   )}
@@ -572,8 +572,9 @@ export const AdminDashboard = () => {
                     style={{
                       padding: '2px 8px',
                       borderRadius: '4px',
-                      backgroundColor: '#fee2e2',
-                      color: '#b91c1c',
+                      backgroundColor: '#2d1519',
+                      border: '1px solid #5c1d24',
+                      color: '#fca5a5',
                       fontSize: '0.72rem',
                       fontWeight: '700',
                     }}

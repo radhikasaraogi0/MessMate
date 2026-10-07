@@ -182,15 +182,15 @@ export const AdminMenu = () => {
             display: 'flex',
             alignItems: 'center',
             gap: '8px',
-            backgroundColor: '#ea580c',
-            color: '#ffffff',
+            backgroundColor: '#fef08a',
+            color: '#0f1013',
             border: 'none',
             padding: '11px 20px',
             borderRadius: '10px',
-            fontWeight: '700',
+            fontWeight: '800',
             fontSize: '0.9rem',
             cursor: 'pointer',
-            boxShadow: '0 4px 6px -1px rgba(234, 88, 12, 0.3)',
+            boxShadow: '0 4px 14px rgba(254, 240, 138, 0.25)',
           }}
         >
           <Plus size={18} />
@@ -204,14 +204,14 @@ export const AdminMenu = () => {
       {/* Date Navigation Bar */}
       <div
         style={{
-          backgroundColor: '#ffffff',
+          backgroundColor: '#181a20',
           borderRadius: '14px',
           padding: '14px 20px',
-          border: '1px solid #e2e8f0',
+          border: '1px solid #262933',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          boxShadow: '0 1px 2px rgba(0,0,0,0.02)',
+          boxShadow: '0 4px 20px -2px rgba(0,0,0,0.3)',
         }}
       >
         <button
@@ -223,12 +223,12 @@ export const AdminMenu = () => {
             gap: '6px',
             padding: '8px 14px',
             borderRadius: '8px',
-            border: '1px solid #cbd5e1',
-            backgroundColor: '#ffffff',
+            border: '1px solid #2a2e39',
+            backgroundColor: '#131418',
             cursor: 'pointer',
             fontWeight: '600',
             fontSize: '0.85rem',
-            color: '#334155',
+            color: '#f8fafc',
           }}
         >
           <ChevronLeft size={16} />
@@ -243,14 +243,16 @@ export const AdminMenu = () => {
             style={{
               padding: '8px 14px',
               borderRadius: '8px',
-              border: '1px solid #cbd5e1',
+              border: '1px solid #2a2e39',
+              backgroundColor: '#131418',
+              color: '#f8fafc',
               fontSize: '0.925rem',
               fontWeight: '700',
               outline: 'none',
               cursor: 'pointer',
             }}
           />
-          <span style={{ fontSize: '0.95rem', fontWeight: '700', color: '#0f172a' }}>
+          <span style={{ fontSize: '0.95rem', fontWeight: '700', color: '#f8fafc' }}>
             {new Date(selectedDate).toLocaleDateString('en-US', {
               weekday: 'long',
               month: 'short',
@@ -268,12 +270,12 @@ export const AdminMenu = () => {
             gap: '6px',
             padding: '8px 14px',
             borderRadius: '8px',
-            border: '1px solid #cbd5e1',
-            backgroundColor: '#ffffff',
+            border: '1px solid #2a2e39',
+            backgroundColor: '#131418',
             cursor: 'pointer',
             fontWeight: '600',
             fontSize: '0.85rem',
-            color: '#334155',
+            color: '#f8fafc',
           }}
         >
           <span>Next Day</span>
@@ -298,10 +300,10 @@ export const AdminMenu = () => {
                 gap: '8px',
                 padding: '10px 18px',
                 borderRadius: '10px',
-                backgroundColor: '#ea580c',
-                color: '#ffffff',
+                backgroundColor: '#fef08a',
+                color: '#0f1013',
                 border: 'none',
-                fontWeight: '700',
+                fontWeight: '800',
                 cursor: 'pointer',
               }}
             >
@@ -321,10 +323,10 @@ export const AdminMenu = () => {
             <div
               key={meal._id}
               style={{
-                backgroundColor: '#ffffff',
+                backgroundColor: '#181a20',
                 borderRadius: '16px',
-                border: '1px solid #e2e8f0',
-                boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
+                border: '1px solid #262933',
+                boxShadow: '0 4px 20px -2px rgba(0,0,0,0.3)',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
@@ -336,18 +338,18 @@ export const AdminMenu = () => {
                 <div
                   style={{
                     padding: '16px 20px',
-                    borderBottom: '1px solid #f1f5f9',
+                    borderBottom: '1px solid #262933',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
-                    backgroundColor: '#f8fafc',
+                    backgroundColor: '#14151a',
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                     <Badge mealType={meal.mealType} size="md">
                       {meal.mealType}
                     </Badge>
-                    <span style={{ fontSize: '0.75rem', color: '#64748b' }}>
+                    <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>
                       {MEAL_TIMES[meal.mealType]}
                     </span>
                   </div>
@@ -359,9 +361,9 @@ export const AdminMenu = () => {
                       style={{
                         padding: '6px',
                         borderRadius: '6px',
-                        border: '1px solid #cbd5e1',
-                        backgroundColor: '#ffffff',
-                        color: '#0284c7',
+                        border: '1px solid #2e3547',
+                        backgroundColor: '#1f232d',
+                        color: '#7dd3fc',
                         cursor: 'pointer',
                       }}
                       title="Edit meal"
@@ -374,9 +376,9 @@ export const AdminMenu = () => {
                       style={{
                         padding: '6px',
                         borderRadius: '6px',
-                        border: '1px solid #fecaca',
-                        backgroundColor: '#fff1f2',
-                        color: '#e11d48',
+                        border: '1px solid #5c1d24',
+                        backgroundColor: '#2b171a',
+                        color: '#fca5a5',
                         cursor: 'pointer',
                       }}
                       title="Delete meal"
@@ -388,7 +390,7 @@ export const AdminMenu = () => {
 
                 {/* Items */}
                 <div style={{ padding: '20px' }}>
-                  <div style={{ fontSize: '0.75rem', fontWeight: '700', color: '#64748b', textTransform: 'uppercase', marginBottom: '8px' }}>
+                  <div style={{ fontSize: '0.75rem', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', marginBottom: '8px' }}>
                     Dishes / Menu Items
                   </div>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '12px' }}>
@@ -398,11 +400,11 @@ export const AdminMenu = () => {
                         style={{
                           padding: '4px 10px',
                           borderRadius: '6px',
-                          backgroundColor: '#fff7ed',
-                          border: '1px solid #fed7aa',
-                          color: '#9a3412',
+                          backgroundColor: '#262315',
+                          border: '1px solid #785e1a',
+                          color: '#fef08a',
                           fontSize: '0.85rem',
-                          fontWeight: '600',
+                          fontWeight: '700',
                         }}
                       >
                         {item}
@@ -411,7 +413,7 @@ export const AdminMenu = () => {
                   </div>
 
                   {meal.description && (
-                    <p style={{ margin: 0, fontSize: '0.85rem', color: '#64748b', lineHeight: 1.45 }}>
+                    <p style={{ margin: 0, fontSize: '0.85rem', color: '#94a3b8', lineHeight: 1.45 }}>
                       {meal.description}
                     </p>
                   )}
@@ -431,7 +433,7 @@ export const AdminMenu = () => {
         <form onSubmit={handleSaveMeal} style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', marginBottom: '6px' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#f8fafc', marginBottom: '6px' }}>
                 Date:
               </label>
               <input
@@ -443,7 +445,9 @@ export const AdminMenu = () => {
                   width: '100%',
                   padding: '9px 12px',
                   borderRadius: '8px',
-                  border: '1px solid #cbd5e1',
+                  border: '1px solid #2a2e39',
+                  backgroundColor: '#131418',
+                  color: '#f8fafc',
                   boxSizing: 'border-box',
                   fontSize: '0.9rem',
                 }}
@@ -451,7 +455,7 @@ export const AdminMenu = () => {
             </div>
 
             <div>
-              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', marginBottom: '6px' }}>
+              <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#f8fafc', marginBottom: '6px' }}>
                 Meal Type:
               </label>
               <select
@@ -461,10 +465,11 @@ export const AdminMenu = () => {
                   width: '100%',
                   padding: '9px 12px',
                   borderRadius: '8px',
-                  border: '1px solid #cbd5e1',
+                  border: '1px solid #2a2e39',
+                  backgroundColor: '#131418',
+                  color: '#f8fafc',
                   boxSizing: 'border-box',
                   fontSize: '0.9rem',
-                  backgroundColor: '#ffffff',
                 }}
               >
                 <option value="Breakfast">Breakfast</option>
@@ -476,7 +481,7 @@ export const AdminMenu = () => {
           </div>
 
           <div>
-            <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', marginBottom: '6px' }}>
+            <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#f8fafc', marginBottom: '6px' }}>
               Food Items (comma-separated):
             </label>
             <input
@@ -489,7 +494,9 @@ export const AdminMenu = () => {
                 width: '100%',
                 padding: '10px 12px',
                 borderRadius: '8px',
-                border: '1px solid #cbd5e1',
+                border: '1px solid #2a2e39',
+                backgroundColor: '#131418',
+                color: '#f8fafc',
                 boxSizing: 'border-box',
                 fontSize: '0.9rem',
               }}
@@ -500,7 +507,7 @@ export const AdminMenu = () => {
           </div>
 
           <div>
-            <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', marginBottom: '6px' }}>
+            <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: '700', color: '#f8fafc', marginBottom: '6px' }}>
               Description / Chef's Note:
             </label>
             <textarea
@@ -512,7 +519,9 @@ export const AdminMenu = () => {
                 width: '100%',
                 padding: '10px 12px',
                 borderRadius: '8px',
-                border: '1px solid #cbd5e1',
+                border: '1px solid #2a2e39',
+                backgroundColor: '#131418',
+                color: '#f8fafc',
                 boxSizing: 'border-box',
                 fontFamily: 'inherit',
                 fontSize: '0.875rem',
@@ -527,8 +536,9 @@ export const AdminMenu = () => {
               style={{
                 padding: '9px 16px',
                 borderRadius: '8px',
-                border: '1px solid #cbd5e1',
-                backgroundColor: '#ffffff',
+                border: '1px solid #2a2e39',
+                backgroundColor: '#181a20',
+                color: '#94a3b8',
                 cursor: 'pointer',
                 fontWeight: '600',
               }}
@@ -541,11 +551,11 @@ export const AdminMenu = () => {
               style={{
                 padding: '9px 20px',
                 borderRadius: '8px',
-                backgroundColor: '#ea580c',
-                color: '#ffffff',
+                backgroundColor: '#fef08a',
+                color: '#0f1013',
                 border: 'none',
                 cursor: saving ? 'not-allowed' : 'pointer',
-                fontWeight: '700',
+                fontWeight: '800',
               }}
             >
               {saving ? 'Saving...' : modalMode === 'add' ? 'Add Meal' : 'Save Changes'}

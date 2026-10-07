@@ -22,8 +22,8 @@ export const Sidebar = () => {
     <aside
       style={{
         width: '260px',
-        backgroundColor: '#ffffff',
-        borderRight: '1px solid #e2e8f0',
+        backgroundColor: '#16181d',
+        borderRight: '1px solid #232731',
         display: 'flex',
         flexDirection: 'column',
         height: 'calc(100vh - 68px)',
@@ -37,7 +37,7 @@ export const Sidebar = () => {
       <div
         style={{
           padding: '20px 20px 14px 20px',
-          borderBottom: '1px solid #f1f5f9',
+          borderBottom: '1px solid #232731',
           display: 'flex',
           alignItems: 'center',
           gap: '10px',
@@ -47,21 +47,22 @@ export const Sidebar = () => {
           style={{
             width: '36px',
             height: '36px',
-            borderRadius: '8px',
-            backgroundColor: '#f3e8ff',
-            color: '#7e22ce',
+            borderRadius: '10px',
+            backgroundColor: '#c4b5fd',
+            color: '#0f1013',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
+            fontWeight: '800',
           }}
         >
           <ShieldCheck size={20} />
         </div>
         <div>
-          <div style={{ fontSize: '0.875rem', fontWeight: '700', color: '#0f172a' }}>
+          <div style={{ fontSize: '0.875rem', fontWeight: '700', color: '#f8fafc' }}>
             Admin Console
           </div>
-          <div style={{ fontSize: '0.75rem', color: '#64748b' }}>
+          <div style={{ fontSize: '0.75rem', color: '#94a3b8' }}>
             Hostel Mess Authority
           </div>
         </div>
@@ -92,8 +93,8 @@ export const Sidebar = () => {
                 textDecoration: 'none',
                 fontSize: '0.9rem',
                 fontWeight: isActive ? '700' : '500',
-                color: isActive ? '#ea580c' : '#475569',
-                backgroundColor: isActive ? '#fff7ed' : 'transparent',
+                color: isActive ? '#0f1013' : '#94a3b8',
+                backgroundColor: isActive ? '#fef08a' : 'transparent',
                 transition: 'all 0.15s ease',
               })}
             >
@@ -110,8 +111,8 @@ export const Sidebar = () => {
           margin: '16px',
           padding: '14px',
           borderRadius: '12px',
-          backgroundColor: '#f8fafc',
-          border: '1px solid #e2e8f0',
+          backgroundColor: '#1b1d24',
+          border: '1px solid #282c37',
           fontSize: '0.8rem',
         }}
       >
@@ -121,14 +122,15 @@ export const Sidebar = () => {
               width: '8px',
               height: '8px',
               borderRadius: '50%',
-              backgroundColor: '#16a34a',
+              backgroundColor: '#bbf7d0',
               display: 'inline-block',
+              boxShadow: '0 0 8px #bbf7d0',
             }}
           />
-          <span style={{ fontWeight: '700', color: '#0f172a' }}>Live System</span>
+          <span style={{ fontWeight: '700', color: '#f8fafc' }}>Live System</span>
         </div>
-        <div style={{ color: '#64748b', fontSize: '0.75rem' }}>
-          Aggregations active &bull; Auto sync
+        <div style={{ color: '#94a3b8', fontSize: '0.75rem' }}>
+          Real-time aggregations active
         </div>
       </div>
     </aside>

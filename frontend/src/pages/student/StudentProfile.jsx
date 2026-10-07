@@ -33,13 +33,13 @@ export const StudentProfile = () => {
             fontFamily: "'Outfit', sans-serif",
             fontSize: '1.85rem',
             fontWeight: '800',
-            color: '#0f172a',
+            color: '#f8fafc',
             margin: '0 0 6px 0',
           }}
         >
           Student Profile
         </h1>
-        <p style={{ margin: 0, color: '#64748b', fontSize: '0.925rem' }}>
+        <p style={{ margin: 0, color: '#94a3b8', fontSize: '0.925rem' }}>
           Your university resident details and feedback engagement profile
         </p>
       </div>
@@ -47,11 +47,11 @@ export const StudentProfile = () => {
       {/* Resident Identity Card */}
       <div
         style={{
-          backgroundColor: '#ffffff',
+          backgroundColor: '#181a20',
           borderRadius: '20px',
-          border: '1px solid #e2e8f0',
+          border: '1px solid #262933',
           padding: '32px',
-          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.03)',
+          boxShadow: '0 4px 20px -2px rgba(0, 0, 0, 0.4)',
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '28px', flexWrap: 'wrap' }}>
@@ -60,30 +60,30 @@ export const StudentProfile = () => {
               width: '72px',
               height: '72px',
               borderRadius: '20px',
-              backgroundColor: '#ea580c',
-              color: '#ffffff',
+              backgroundColor: '#fef08a',
+              color: '#0f1013',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               fontSize: '2rem',
-              fontWeight: '800',
+              fontWeight: '900',
               fontFamily: "'Outfit', sans-serif",
-              boxShadow: '0 10px 15px -3px rgba(234, 88, 12, 0.3)',
+              boxShadow: '0 8px 18px rgba(254, 240, 138, 0.25)',
             }}
           >
             {user?.name?.charAt(0).toUpperCase()}
           </div>
           <div>
-            <h2 style={{ margin: '0 0 4px 0', fontSize: '1.5rem', fontWeight: '800', color: '#0f172a' }}>
+            <h2 style={{ margin: '0 0 6px 0', fontSize: '1.5rem', fontWeight: '800', color: '#f8fafc' }}>
               {user?.name}
             </h2>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#64748b', fontSize: '0.9rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#94a3b8', fontSize: '0.9rem' }}>
               <span
                 style={{
-                  backgroundColor: '#fff7ed',
-                  color: '#ea580c',
-                  border: '1px solid #fed7aa',
-                  padding: '2px 8px',
+                  backgroundColor: '#262315',
+                  color: '#fef08a',
+                  border: '1px solid #785e1a',
+                  padding: '3px 10px',
                   borderRadius: '6px',
                   fontSize: '0.75rem',
                   fontWeight: '700',
@@ -105,48 +105,48 @@ export const StudentProfile = () => {
             gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
             gap: '16px',
             paddingTop: '20px',
-            borderTop: '1px solid #f1f5f9',
+            borderTop: '1px solid #262933',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px', backgroundColor: '#f8fafc', borderRadius: '12px' }}>
-            <UtensilsCrossed size={20} color="#ea580c" />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '14px', backgroundColor: '#131418', border: '1px solid #22252e', borderRadius: '14px' }}>
+            <UtensilsCrossed size={20} color="#fef08a" />
             <div>
-              <div style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: '600', textTransform: 'uppercase' }}>Assigned Mess</div>
-              <div style={{ fontSize: '0.95rem', fontWeight: '700', color: '#0f172a' }}>
+              <div style={{ fontSize: '0.75rem', color: '#94a3b8', fontWeight: '600', textTransform: 'uppercase' }}>Assigned Mess</div>
+              <div style={{ fontSize: '0.95rem', fontWeight: '700', color: '#f8fafc' }}>
                 {user?.messId?.name || 'Mess'} {user?.messId?.area ? `(${user?.messId?.area})` : ''}
               </div>
             </div>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px', backgroundColor: '#f8fafc', borderRadius: '12px' }}>
-            <Building size={20} color="#ea580c" />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '14px', backgroundColor: '#131418', border: '1px solid #22252e', borderRadius: '14px' }}>
+            <Building size={20} color="#c4b5fd" />
             <div>
-              <div style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: '600', textTransform: 'uppercase' }}>Hostel Block</div>
-              <div style={{ fontSize: '0.95rem', fontWeight: '700', color: '#0f172a' }}>{user?.hostel}</div>
+              <div style={{ fontSize: '0.75rem', color: '#94a3b8', fontWeight: '600', textTransform: 'uppercase' }}>Hostel Block</div>
+              <div style={{ fontSize: '0.95rem', fontWeight: '700', color: '#f8fafc' }}>{user?.hostel}</div>
             </div>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px', backgroundColor: '#f8fafc', borderRadius: '12px' }}>
-            <DoorClosed size={20} color="#ea580c" />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '14px', backgroundColor: '#131418', border: '1px solid #22252e', borderRadius: '14px' }}>
+            <DoorClosed size={20} color="#fed7aa" />
             <div>
-              <div style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: '600', textTransform: 'uppercase' }}>Room Number</div>
-              <div style={{ fontSize: '0.95rem', fontWeight: '700', color: '#0f172a' }}>Room {user?.roomNumber}</div>
+              <div style={{ fontSize: '0.75rem', color: '#94a3b8', fontWeight: '600', textTransform: 'uppercase' }}>Room Number</div>
+              <div style={{ fontSize: '0.95rem', fontWeight: '700', color: '#f8fafc' }}>Room {user?.roomNumber}</div>
             </div>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px', backgroundColor: '#f8fafc', borderRadius: '12px' }}>
-            <Award size={20} color="#ea580c" />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '14px', backgroundColor: '#131418', border: '1px solid #22252e', borderRadius: '14px' }}>
+            <Award size={20} color="#bbf7d0" />
             <div>
-              <div style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: '600', textTransform: 'uppercase' }}>Reviews Submitted</div>
-              <div style={{ fontSize: '0.95rem', fontWeight: '700', color: '#0f172a' }}>{stats?.totalSubmissions || 0} reviews</div>
+              <div style={{ fontSize: '0.75rem', color: '#94a3b8', fontWeight: '600', textTransform: 'uppercase' }}>Reviews Submitted</div>
+              <div style={{ fontSize: '0.95rem', fontWeight: '700', color: '#f8fafc' }}>{stats?.totalSubmissions || 0} reviews</div>
             </div>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px', backgroundColor: '#f8fafc', borderRadius: '12px' }}>
-            <Star size={20} color="#f59e0b" fill="#f59e0b" />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '14px', backgroundColor: '#131418', border: '1px solid #22252e', borderRadius: '14px' }}>
+            <Star size={20} color="#fbbf24" fill="#fbbf24" />
             <div>
-              <div style={{ fontSize: '0.75rem', color: '#64748b', fontWeight: '600', textTransform: 'uppercase' }}>Your Average Rating</div>
-              <div style={{ fontSize: '0.95rem', fontWeight: '700', color: '#0f172a' }}>
+              <div style={{ fontSize: '0.75rem', color: '#94a3b8', fontWeight: '600', textTransform: 'uppercase' }}>Your Average Rating</div>
+              <div style={{ fontSize: '0.95rem', fontWeight: '700', color: '#fef08a' }}>
                 {stats?.avgRating ? `${stats.avgRating} ★` : 'No reviews yet'}
               </div>
             </div>

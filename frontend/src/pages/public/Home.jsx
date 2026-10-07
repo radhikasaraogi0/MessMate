@@ -16,15 +16,16 @@ import {
 
 export const Home = () => {
   return (
-    <div style={{ backgroundColor: '#ffffff', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ backgroundColor: '#111215', minHeight: '100vh', display: 'flex', flexDirection: 'column', color: '#f8fafc' }}>
       {/* Top Hero Section */}
       <section
         style={{
-          background: 'linear-gradient(135deg, #fff7ed 0%, #ffedd5 50%, #fed7aa 100%)',
+          background: 'radial-gradient(ellipse at top, #1e222b 0%, #111215 75%)',
           padding: '80px 20px 100px 20px',
           textAlign: 'center',
           position: 'relative',
           overflow: 'hidden',
+          borderBottom: '1px solid #1f222b',
         }}
       >
         <div style={{ maxWidth: '920px', margin: '0 auto', position: 'relative', zIndex: 2 }}>
@@ -33,14 +34,15 @@ export const Home = () => {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '8px',
-              backgroundColor: '#ffffff',
+              backgroundColor: '#181a20',
               padding: '6px 16px',
               borderRadius: '9999px',
-              boxShadow: '0 2px 4px rgba(0,0,0,0.06)',
+              border: '1px solid #262933',
+              boxShadow: '0 2px 8px rgba(0,0,0,0.4)',
               marginBottom: '24px',
               fontSize: '0.875rem',
               fontWeight: '600',
-              color: '#ea580c',
+              color: '#fef08a',
             }}
           >
             <Sparkles size={16} />
@@ -56,20 +58,20 @@ export const Home = () => {
               fontFamily: "'Outfit', sans-serif",
               fontSize: 'clamp(2.5rem, 6vw, 3.8rem)',
               fontWeight: '800',
-              color: '#0f172a',
+              color: '#f8fafc',
               lineHeight: 1.15,
               margin: '0 0 20px 0',
               letterSpacing: '-0.03em',
             }}
           >
             Better Campus Meals With <br />
-            <span style={{ color: '#ea580c' }}>Your Mess Dining Companion</span>
+            <span style={{ color: '#fef08a' }}>Your Mess Dining Companion</span>
           </h1>
 
           <p
             style={{
               fontSize: 'clamp(1.05rem, 2.5vw, 1.25rem)',
-              color: '#475569',
+              color: '#94a3b8',
               lineHeight: 1.6,
               maxWidth: '720px',
               margin: '0 auto 36px auto',
@@ -94,14 +96,14 @@ export const Home = () => {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                backgroundColor: '#ea580c',
-                color: '#ffffff',
+                backgroundColor: '#fef08a',
+                color: '#0f1013',
                 padding: '14px 28px',
                 borderRadius: '12px',
                 fontWeight: '700',
                 fontSize: '1rem',
                 textDecoration: 'none',
-                boxShadow: '0 10px 15px -3px rgba(234, 88, 12, 0.35)',
+                boxShadow: '0 8px 20px rgba(254, 240, 138, 0.25)',
                 transition: 'transform 0.15s ease, background-color 0.15s ease',
               }}
             >
@@ -115,15 +117,15 @@ export const Home = () => {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                backgroundColor: '#ffffff',
-                color: '#0f172a',
+                backgroundColor: '#181a20',
+                color: '#f8fafc',
                 padding: '14px 28px',
                 borderRadius: '12px',
                 fontWeight: '700',
                 fontSize: '1rem',
                 textDecoration: 'none',
-                border: '1px solid #cbd5e1',
-                boxShadow: '0 4px 6px -1px rgba(0,0,0,0.05)',
+                border: '1px solid #262933',
+                boxShadow: '0 4px 6px -1px rgba(0,0,0,0.2)',
               }}
             >
               <span>Student Registration</span>
@@ -136,10 +138,10 @@ export const Home = () => {
       <section style={{ maxWidth: '1100px', margin: '-40px auto 60px auto', padding: '0 20px', width: '100%', boxSizing: 'border-box', position: 'relative', zIndex: 10 }}>
         <div
           style={{
-            backgroundColor: '#ffffff',
+            backgroundColor: '#181a20',
             borderRadius: '20px',
-            boxShadow: '0 20px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.04)',
-            border: '1px solid #e2e8f0',
+            boxShadow: '0 20px 25px -5px rgba(0,0,0,0.5), 0 8px 10px -6px rgba(0,0,0,0.3)',
+            border: '1px solid #262933',
             padding: '28px 32px',
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -150,21 +152,21 @@ export const Home = () => {
           <div
             style={{
               padding: '20px',
-              backgroundColor: '#fff7ed',
+              backgroundColor: '#16181d',
               borderRadius: '14px',
-              border: '1px solid #fed7aa',
+              border: '1px solid #262933',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-              <Users size={20} color="#ea580c" />
-              <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: '700', color: '#9a3412' }}>
+              <Users size={20} color="#fef08a" />
+              <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: '700', color: '#f8fafc' }}>
                 Student Demo Account
               </h3>
             </div>
-            <p style={{ fontSize: '0.85rem', color: '#64748b', margin: '0 0 12px 0' }}>
+            <p style={{ fontSize: '0.85rem', color: '#94a3b8', margin: '0 0 12px 0' }}>
               Check today’s menu, rate meals with 4-pillar ratings, and track your history.
             </p>
-            <div style={{ fontSize: '0.875rem', fontFamily: 'monospace', color: '#1e293b', marginBottom: '14px' }}>
+            <div style={{ fontSize: '0.875rem', fontFamily: 'monospace', color: '#cbd5e1', marginBottom: '14px', backgroundColor: '#111215', padding: '10px 12px', borderRadius: '8px', border: '1px solid #262933' }}>
               <strong>Email:</strong> rahul@messmate.edu<br />
               <strong>Password:</strong> Student@123
             </div>
@@ -173,11 +175,11 @@ export const Home = () => {
               style={{
                 display: 'block',
                 textAlign: 'center',
-                backgroundColor: '#ea580c',
-                color: '#ffffff',
+                backgroundColor: '#fef08a',
+                color: '#0f1013',
                 padding: '9px',
                 borderRadius: '8px',
-                fontWeight: '600',
+                fontWeight: '700',
                 fontSize: '0.85rem',
                 textDecoration: 'none',
               }}
@@ -190,21 +192,21 @@ export const Home = () => {
           <div
             style={{
               padding: '20px',
-              backgroundColor: '#f5f3ff',
+              backgroundColor: '#16181d',
               borderRadius: '14px',
-              border: '1px solid #ddd6fe',
+              border: '1px solid #262933',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-              <ShieldCheck size={20} color="#7c3aed" />
-              <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: '700', color: '#5b21b6' }}>
+              <ShieldCheck size={20} color="#c4b5fd" />
+              <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: '700', color: '#f8fafc' }}>
                 Admin Demo Account
               </h3>
             </div>
-            <p style={{ fontSize: '0.85rem', color: '#64748b', margin: '0 0 12px 0' }}>
+            <p style={{ fontSize: '0.85rem', color: '#94a3b8', margin: '0 0 12px 0' }}>
               View live Recharts analytics, manage menus, filter student feedback & issues.
             </p>
-            <div style={{ fontSize: '0.875rem', fontFamily: 'monospace', color: '#1e293b', marginBottom: '14px' }}>
+            <div style={{ fontSize: '0.875rem', fontFamily: 'monospace', color: '#cbd5e1', marginBottom: '14px', backgroundColor: '#111215', padding: '10px 12px', borderRadius: '8px', border: '1px solid #262933' }}>
               <strong>Email:</strong> admin@messmate.edu<br />
               <strong>Password:</strong> Admin@123
             </div>
@@ -213,11 +215,11 @@ export const Home = () => {
               style={{
                 display: 'block',
                 textAlign: 'center',
-                backgroundColor: '#7c3aed',
-                color: '#ffffff',
+                backgroundColor: '#c4b5fd',
+                color: '#0f1013',
                 padding: '9px',
                 borderRadius: '8px',
-                fontWeight: '600',
+                fontWeight: '700',
                 fontSize: '0.85rem',
                 textDecoration: 'none',
               }}
@@ -230,21 +232,21 @@ export const Home = () => {
           <div
             style={{
               padding: '20px',
-              backgroundColor: '#f0f9ff',
+              backgroundColor: '#16181d',
               borderRadius: '14px',
-              border: '1px solid #bae6fd',
+              border: '1px solid #262933',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-              <UtensilsCrossed size={20} color="#0284c7" />
-              <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: '700', color: '#0369a1' }}>
+              <UtensilsCrossed size={20} color="#fed7aa" />
+              <h3 style={{ margin: 0, fontSize: '1.1rem', fontWeight: '700', color: '#f8fafc' }}>
                 Multi-Mess Onboarding
               </h3>
             </div>
-            <p style={{ fontSize: '0.85rem', color: '#64748b', margin: '0 0 12px 0' }}>
-              Register $N$ independent hostel mess facilities across campus zones.
+            <p style={{ fontSize: '0.85rem', color: '#94a3b8', margin: '0 0 12px 0' }}>
+              Register independent hostel mess facilities across campus zones.
             </p>
-            <div style={{ fontSize: '0.875rem', color: '#1e293b', marginBottom: '14px', lineHeight: 1.45 }}>
+            <div style={{ fontSize: '0.875rem', color: '#cbd5e1', marginBottom: '14px', lineHeight: 1.45, backgroundColor: '#111215', padding: '10px 12px', borderRadius: '8px', border: '1px solid #262933' }}>
               ⚡ <strong>Multi-Tenant:</strong> Isolated menus, student rosters, feedback & charts.
             </div>
             <Link
@@ -252,11 +254,11 @@ export const Home = () => {
               style={{
                 display: 'block',
                 textAlign: 'center',
-                backgroundColor: '#0284c7',
-                color: '#ffffff',
+                backgroundColor: '#fed7aa',
+                color: '#0f1013',
                 padding: '9px',
                 borderRadius: '8px',
-                fontWeight: '600',
+                fontWeight: '700',
                 fontSize: '0.85rem',
                 textDecoration: 'none',
               }}
@@ -275,13 +277,13 @@ export const Home = () => {
               fontFamily: "'Outfit', sans-serif",
               fontSize: '2rem',
               fontWeight: '800',
-              color: '#0f172a',
+              color: '#f8fafc',
               margin: '0 0 12px 0',
             }}
           >
             Engineered for Campus Mess Excellence
           </h2>
-          <p style={{ color: '#64748b', fontSize: '1.05rem', maxWidth: '600px', margin: '0 auto' }}>
+          <p style={{ color: '#94a3b8', fontSize: '1.05rem', maxWidth: '600px', margin: '0 auto' }}>
             A comprehensive feedback and analytics loop providing full transparency for students and actionable metrics for mess supervisors.
           </p>
         </div>
@@ -295,11 +297,11 @@ export const Home = () => {
         >
           <div
             style={{
-              backgroundColor: '#ffffff',
+              backgroundColor: '#181a20',
               padding: '24px',
               borderRadius: '16px',
-              border: '1px solid #e2e8f0',
-              boxShadow: '0 4px 6px -1px rgba(0,0,0,0.03)',
+              border: '1px solid #262933',
+              boxShadow: '0 4px 6px -1px rgba(0,0,0,0.2)',
             }}
           >
             <div
@@ -307,8 +309,8 @@ export const Home = () => {
                 width: '46px',
                 height: '46px',
                 borderRadius: '12px',
-                backgroundColor: '#ffedd5',
-                color: '#ea580c',
+                backgroundColor: '#242217',
+                color: '#fef08a',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -317,21 +319,21 @@ export const Home = () => {
             >
               <Star size={24} />
             </div>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#0f172a', margin: '0 0 8px 0' }}>
+            <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#f8fafc', margin: '0 0 8px 0' }}>
               4-Pillar Rating Scale
             </h3>
-            <p style={{ fontSize: '0.9rem', color: '#64748b', margin: 0, lineHeight: 1.5 }}>
+            <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0, lineHeight: 1.5 }}>
               Students rate every meal specifically across Taste, Food Quality, Hygiene, and Quantity with granular precision.
             </p>
           </div>
 
           <div
             style={{
-              backgroundColor: '#ffffff',
+              backgroundColor: '#181a20',
               padding: '24px',
               borderRadius: '16px',
-              border: '1px solid #e2e8f0',
-              boxShadow: '0 4px 6px -1px rgba(0,0,0,0.03)',
+              border: '1px solid #262933',
+              boxShadow: '0 4px 6px -1px rgba(0,0,0,0.2)',
             }}
           >
             <div
@@ -339,8 +341,8 @@ export const Home = () => {
                 width: '46px',
                 height: '46px',
                 borderRadius: '12px',
-                backgroundColor: '#e0f2fe',
-                color: '#0284c7',
+                backgroundColor: '#192330',
+                color: '#93c5fd',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -349,21 +351,21 @@ export const Home = () => {
             >
               <Clock size={24} />
             </div>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#0f172a', margin: '0 0 8px 0' }}>
+            <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#f8fafc', margin: '0 0 8px 0' }}>
               Daily & Weekly Menus
             </h3>
-            <p style={{ fontSize: '0.9rem', color: '#64748b', margin: 0, lineHeight: 1.5 }}>
+            <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0, lineHeight: 1.5 }}>
               Check Breakfast, Lunch, Evening Snacks, and Dinner menus ahead of time with live average rating tags.
             </p>
           </div>
 
           <div
             style={{
-              backgroundColor: '#ffffff',
+              backgroundColor: '#181a20',
               padding: '24px',
               borderRadius: '16px',
-              border: '1px solid #e2e8f0',
-              boxShadow: '0 4px 6px -1px rgba(0,0,0,0.03)',
+              border: '1px solid #262933',
+              boxShadow: '0 4px 6px -1px rgba(0,0,0,0.2)',
             }}
           >
             <div
@@ -371,8 +373,8 @@ export const Home = () => {
                 width: '46px',
                 height: '46px',
                 borderRadius: '12px',
-                backgroundColor: '#f3e8ff',
-                color: '#7e22ce',
+                backgroundColor: '#241c2c',
+                color: '#c4b5fd',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -381,21 +383,21 @@ export const Home = () => {
             >
               <TrendingUp size={24} />
             </div>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#0f172a', margin: '0 0 8px 0' }}>
+            <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#f8fafc', margin: '0 0 8px 0' }}>
               Dynamic Recharts
             </h3>
-            <p style={{ fontSize: '0.9rem', color: '#64748b', margin: 0, lineHeight: 1.5 }}>
+            <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0, lineHeight: 1.5 }}>
               Automated MongoDB aggregation powers live 7-day rating trend lines, meal comparisons, and complaint analytics.
             </p>
           </div>
 
           <div
             style={{
-              backgroundColor: '#ffffff',
+              backgroundColor: '#181a20',
               padding: '24px',
               borderRadius: '16px',
-              border: '1px solid #e2e8f0',
-              boxShadow: '0 4px 6px -1px rgba(0,0,0,0.03)',
+              border: '1px solid #262933',
+              boxShadow: '0 4px 6px -1px rgba(0,0,0,0.2)',
             }}
           >
             <div
@@ -403,8 +405,8 @@ export const Home = () => {
                 width: '46px',
                 height: '46px',
                 borderRadius: '12px',
-                backgroundColor: '#fee2e2',
-                color: '#dc2626',
+                backgroundColor: '#261e20',
+                color: '#fca5a5',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -413,10 +415,10 @@ export const Home = () => {
             >
               <MessageSquare size={24} />
             </div>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#0f172a', margin: '0 0 8px 0' }}>
+            <h3 style={{ fontSize: '1.2rem', fontWeight: '700', color: '#f8fafc', margin: '0 0 8px 0' }}>
               Actionable Issue Tags
             </h3>
-            <p style={{ fontSize: '0.9rem', color: '#64748b', margin: 0, lineHeight: 1.5 }}>
+            <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0, lineHeight: 1.5 }}>
               Tag issues instantly: "Too spicy", "Too salty", "Food was cold", "Too oily", or "Less quantity" for rapid kitchen fixes.
             </p>
           </div>
@@ -427,21 +429,22 @@ export const Home = () => {
       <footer
         style={{
           marginTop: 'auto',
-          backgroundColor: '#0f172a',
+          backgroundColor: '#16181d',
           color: '#94a3b8',
           padding: '40px 20px 30px 20px',
           textAlign: 'center',
           fontSize: '0.875rem',
+          borderTop: '1px solid #262933',
         }}
       >
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '12px' }}>
             <Logo size="md" isDark={true} />
           </div>
-          <p style={{ margin: '0 0 16px 0', color: '#64748b' }}>
+          <p style={{ margin: '0 0 16px 0', color: '#94a3b8' }}>
             Empowering college hostel students with a transparent, responsive dining feedback ecosystem.
           </p>
-          <div style={{ borderTop: '1px solid #1e293b', paddingTop: '16px', fontSize: '0.8rem' }}>
+          <div style={{ borderTop: '1px solid #262933', paddingTop: '16px', fontSize: '0.8rem', color: '#64748b' }}>
             &copy; {new Date().getFullYear()} MessMate. All rights reserved.
           </div>
         </div>

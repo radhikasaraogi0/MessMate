@@ -2,14 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap');
 
 :root {
-  --primary: #ea580c;
-  --primary-hover: #c2410c;
-  --primary-light: #fff7ed;
-  --primary-border: #fed7aa;
-  --bg-page: #f8fafc;
-  --text-main: #0f172a;
-  --text-muted: #64748b;
-  --border-color: #e2e8f0;
+  --primary: #f9cb6e;
+  --primary-hover: #fcd34d;
+  --primary-light: #23221d;
+  --primary-border: #6b572a;
+  --accent-honey: #fef08a;
+  --accent-lavender: #c4b5fd;
+  --accent-peach: #fed7aa;
+  --accent-lime: #bbf7d0;
+  --bg-page: #111215;
+  --bg-surface: #16181e;
+  --bg-card: #181a20;
+  --bg-card-hover: #1f222a;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: #262933;
 }
 
 * {
@@ -94,12 +101,12 @@ button, input, select, textarea {
   height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #111215;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #2a2d38;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #3f4455;
 }

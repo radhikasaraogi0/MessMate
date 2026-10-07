@@ -8,7 +8,7 @@ export const StarRating = ({
   onChange,
   size = 20,
   showLabel = false,
-  color = '#f59e0b', // amber-500
+  color = '#fbbf24', // radiant gold
 }) => {
   const [hoverRating, setHoverRating] = useState(0);
 
@@ -64,7 +64,7 @@ export const StarRating = ({
               <Star
                 size={size}
                 fill={isFilled ? color : isHalf ? 'url(#halfGrad)' : 'none'}
-                stroke={isFilled || isHalf ? color : '#cbd5e1'}
+                stroke={isFilled || isHalf ? color : '#3f4452'}
                 strokeWidth={2}
               />
             </button>
@@ -75,8 +75,8 @@ export const StarRating = ({
         <span
           style={{
             fontSize: '0.875rem',
-            fontWeight: '600',
-            color: '#334155',
+            fontWeight: '700',
+            color: '#f8fafc',
             marginLeft: '4px',
           }}
         >

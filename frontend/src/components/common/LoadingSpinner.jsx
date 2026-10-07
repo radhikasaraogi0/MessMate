@@ -10,7 +10,7 @@ export const LoadingSpinner = ({ message = 'Loading data...', size = 32 }) => {
         alignItems: 'center',
         justifyContent: 'center',
         padding: '48px 16px',
-        color: '#64748b',
+        color: '#94a3b8',
         gap: '12px',
       }}
     >
@@ -18,7 +18,7 @@ export const LoadingSpinner = ({ message = 'Loading data...', size = 32 }) => {
         size={size}
         style={{
           animation: 'spin 1s linear infinite',
-          color: '#ea580c',
+          color: '#fef08a',
         }}
       />
       <span style={{ fontSize: '0.925rem', fontWeight: '500' }}>{message}</span>

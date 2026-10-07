@@ -5,7 +5,7 @@ import Sidebar from '../components/layout/Sidebar';
 
 export const AdminLayout = () => {
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: '#f8fafc' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: '#111215' }}>
       <Navbar />
       <div style={{ display: 'flex', flex: 1 }}>
         <Sidebar />

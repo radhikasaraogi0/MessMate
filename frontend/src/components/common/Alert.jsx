@@ -6,28 +6,28 @@ export const Alert = ({ type = 'info', message, onClose, className = '' }) => {
 
   const configs = {
     success: {
-      bg: '#f0fdf4',
-      border: '#bbf7d0',
-      text: '#166534',
-      icon: <CheckCircle2 size={18} color="#16a34a" />,
+      bg: '#14281e',
+      border: '#1e4630',
+      text: '#bbf7d0',
+      icon: <CheckCircle2 size={18} color="#4ade80" />,
     },
     error: {
-      bg: '#fef2f2',
-      border: '#fecaca',
-      text: '#991b1b',
-      icon: <AlertCircle size={18} color="#dc2626" />,
+      bg: '#2d1519',
+      border: '#5c1d24',
+      text: '#fca5a5',
+      icon: <AlertCircle size={18} color="#f87171" />,
     },
     warning: {
-      bg: '#fffbeb',
-      border: '#fde68a',
-      text: '#92400e',
-      icon: <AlertTriangle size={18} color="#d97706" />,
+      bg: '#2d2413',
+      border: '#5a441a',
+      text: '#fef08a',
+      icon: <AlertTriangle size={18} color="#fbbf24" />,
     },
     info: {
-      bg: '#f0f9ff',
-      border: '#bae6fd',
-      text: '#075985',
-      icon: <Info size={18} color="#0284c7" />,
+      bg: '#132338',
+      border: '#1e3a5f',
+      text: '#93c5fd',
+      icon: <Info size={18} color="#38bdf8" />,
     },
   };
 

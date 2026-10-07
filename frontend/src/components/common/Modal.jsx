@@ -41,14 +41,15 @@ export const Modal = ({ isOpen, onClose, title, children, maxWidth = '550px' }) 
     >
       <div
         style={{
-          backgroundColor: '#ffffff',
+          backgroundColor: '#181a20',
           borderRadius: '16px',
           width: '100%',
           maxWidth,
           maxHeight: '90vh',
           display: 'flex',
           flexDirection: 'column',
-          boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+          border: '1px solid #262933',
+          boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4)',
           overflow: 'hidden',
           animation: 'slideUp 0.2s ease-out',
         }}
@@ -61,7 +62,7 @@ export const Modal = ({ isOpen, onClose, title, children, maxWidth = '550px' }) 
             alignItems: 'center',
             justifyContent: 'space-between',
             padding: '18px 24px',
-            borderBottom: '1px solid #f1f5f9',
+            borderBottom: '1px solid #262933',
           }}
         >
           <h3
@@ -69,7 +70,7 @@ export const Modal = ({ isOpen, onClose, title, children, maxWidth = '550px' }) 
               margin: 0,
               fontSize: '1.25rem',
               fontWeight: '700',
-              color: '#0f172a',
+              color: '#f8fafc',
             }}
           >
             {title}
@@ -78,19 +79,19 @@ export const Modal = ({ isOpen, onClose, title, children, maxWidth = '550px' }) 
             type="button"
             onClick={onClose}
             style={{
-              background: '#f8fafc',
+              background: '#22252e',
               border: 'none',
               borderRadius: '8px',
               padding: '6px',
               cursor: 'pointer',
-              color: '#64748b',
+              color: '#94a3b8',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               transition: 'background 0.15s',
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#f1f5f9')}
-            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#f8fafc')}
+            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#2d313d')}
+            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#22252e')}
           >
             <X size={20} />
           </button>

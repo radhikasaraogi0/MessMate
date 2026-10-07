@@ -115,14 +115,14 @@ export const MessMenu = () => {
               fontFamily: "'Outfit', sans-serif",
               fontSize: '1.85rem',
               fontWeight: '800',
-              color: '#0f172a',
+              color: '#f8fafc',
               margin: '0 0 6px 0',
             }}
           >
             Hostel Mess Menu
           </h1>
-          <p style={{ margin: 0, color: '#64748b', fontSize: '0.925rem' }}>
-            Check detailed schedules, nutritional options, and meal timings
+          <p style={{ margin: 0, color: '#94a3b8', fontSize: '0.925rem' }}>
+            Check detailed schedules, food items, and serving times
           </p>
         </div>
 
@@ -130,9 +130,10 @@ export const MessMenu = () => {
         <div
           style={{
             display: 'flex',
-            backgroundColor: '#e2e8f0',
+            backgroundColor: '#1c1f26',
             padding: '4px',
             borderRadius: '12px',
+            border: '1px solid #282c38',
           }}
         >
           <button
@@ -142,12 +143,11 @@ export const MessMenu = () => {
               padding: '8px 18px',
               borderRadius: '8px',
               border: 'none',
-              backgroundColor: viewMode === 'daily' ? '#ffffff' : 'transparent',
-              color: viewMode === 'daily' ? '#0f172a' : '#64748b',
+              backgroundColor: viewMode === 'daily' ? '#fef08a' : 'transparent',
+              color: viewMode === 'daily' ? '#0f1013' : '#94a3b8',
               fontWeight: '700',
               fontSize: '0.875rem',
               cursor: 'pointer',
-              boxShadow: viewMode === 'daily' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
               transition: 'all 0.15s ease',
             }}
           >
@@ -160,12 +160,11 @@ export const MessMenu = () => {
               padding: '8px 18px',
               borderRadius: '8px',
               border: 'none',
-              backgroundColor: viewMode === 'weekly' ? '#ffffff' : 'transparent',
-              color: viewMode === 'weekly' ? '#0f172a' : '#64748b',
+              backgroundColor: viewMode === 'weekly' ? '#fef08a' : 'transparent',
+              color: viewMode === 'weekly' ? '#0f1013' : '#94a3b8',
               fontWeight: '700',
               fontSize: '0.875rem',
               cursor: 'pointer',
-              boxShadow: viewMode === 'weekly' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
               transition: 'all 0.15s ease',
             }}
           >
@@ -180,14 +179,14 @@ export const MessMenu = () => {
           {/* Date Selector Navigation Bar */}
           <div
             style={{
-              backgroundColor: '#ffffff',
+              backgroundColor: '#181a20',
               borderRadius: '14px',
               padding: '12px 20px',
-              border: '1px solid #e2e8f0',
+              border: '1px solid #262933',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
-              boxShadow: '0 1px 2px rgba(0,0,0,0.02)',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
             }}
           >
             <button
@@ -199,12 +198,12 @@ export const MessMenu = () => {
                 gap: '6px',
                 padding: '8px 12px',
                 borderRadius: '8px',
-                border: '1px solid #cbd5e1',
-                backgroundColor: '#ffffff',
+                border: '1px solid #2e323e',
+                backgroundColor: '#1e212a',
                 cursor: 'pointer',
                 fontWeight: '600',
                 fontSize: '0.85rem',
-                color: '#334155',
+                color: '#f8fafc',
               }}
             >
               <ChevronLeft size={16} />
@@ -219,15 +218,16 @@ export const MessMenu = () => {
                 style={{
                   padding: '7px 12px',
                   borderRadius: '8px',
-                  border: '1px solid #cbd5e1',
+                  border: '1px solid #2e323e',
                   fontSize: '0.9rem',
                   fontWeight: '600',
-                  color: '#0f172a',
+                  color: '#f8fafc',
+                  backgroundColor: '#13151a',
                   outline: 'none',
                   cursor: 'pointer',
                 }}
               />
-              <span style={{ fontSize: '0.9rem', fontWeight: '700', color: '#0f172a' }}>
+              <span style={{ fontSize: '0.9rem', fontWeight: '700', color: '#f8fafc' }}>
                 {formattedDateHeader}
               </span>
             </div>
@@ -241,12 +241,12 @@ export const MessMenu = () => {
                 gap: '6px',
                 padding: '8px 12px',
                 borderRadius: '8px',
-                border: '1px solid #cbd5e1',
-                backgroundColor: '#ffffff',
+                border: '1px solid #2e323e',
+                backgroundColor: '#1e212a',
                 cursor: 'pointer',
                 fontWeight: '600',
                 fontSize: '0.85rem',
-                color: '#334155',
+                color: '#f8fafc',
               }}
             >
               <span>Next Day</span>
@@ -276,10 +276,10 @@ export const MessMenu = () => {
                   <div
                     key={meal._id}
                     style={{
-                      backgroundColor: '#ffffff',
+                      backgroundColor: '#181a20',
                       borderRadius: '16px',
-                      border: '1px solid #e2e8f0',
-                      boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.03)',
+                      border: '1px solid #262933',
+                      boxShadow: '0 4px 14px rgba(0, 0, 0, 0.25)',
                       display: 'flex',
                       flexDirection: 'column',
                       justifyContent: 'space-between',
@@ -291,11 +291,11 @@ export const MessMenu = () => {
                       <div
                         style={{
                           padding: '16px 20px',
-                          borderBottom: '1px solid #f1f5f9',
+                          borderBottom: '1px solid #232630',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'space-between',
-                          backgroundColor: '#f8fafc',
+                          backgroundColor: '#1b1d24',
                         }}
                       >
                         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -303,22 +303,22 @@ export const MessMenu = () => {
                             style={{
                               width: '36px',
                               height: '36px',
-                              borderRadius: '8px',
-                              backgroundColor: '#ffffff',
-                              border: '1px solid #e2e8f0',
+                              borderRadius: '10px',
+                              backgroundColor: '#282415',
+                              border: '1px solid #45391d',
                               display: 'flex',
                               alignItems: 'center',
                               justifyContent: 'center',
-                              color: '#ea580c',
+                              color: '#fef08a',
                             }}
                           >
                             <IconComponent size={20} />
                           </div>
                           <div>
-                            <h3 style={{ margin: 0, fontSize: '1.05rem', fontWeight: '700', color: '#0f172a' }}>
+                            <h3 style={{ margin: 0, fontSize: '1.05rem', fontWeight: '700', color: '#f8fafc' }}>
                               {meal.mealType}
                             </h3>
-                            <span style={{ fontSize: '0.75rem', color: '#64748b' }}>
+                            <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>
                               {MEAL_TIMES[meal.mealType]}
                             </span>
                           </div>
@@ -333,7 +333,7 @@ export const MessMenu = () => {
 
                       {/* Food Items Pill List */}
                       <div style={{ padding: '20px' }}>
-                        <div style={{ fontSize: '0.78rem', fontWeight: '700', color: '#64748b', textTransform: 'uppercase', marginBottom: '10px' }}>
+                        <div style={{ fontSize: '0.78rem', fontWeight: '700', color: '#94a3b8', textTransform: 'uppercase', marginBottom: '10px' }}>
                           Items Served
                         </div>
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '16px' }}>
@@ -343,9 +343,9 @@ export const MessMenu = () => {
                               style={{
                                 padding: '5px 12px',
                                 borderRadius: '8px',
-                                backgroundColor: '#fff7ed',
-                                border: '1px solid #fed7aa',
-                                color: '#9a3412',
+                                backgroundColor: '#211f18',
+                                border: '1px solid #4a3e21',
+                                color: '#fef08a',
                                 fontSize: '0.85rem',
                                 fontWeight: '600',
                               }}
@@ -356,7 +356,7 @@ export const MessMenu = () => {
                         </div>
 
                         {meal.description && (
-                          <p style={{ margin: 0, fontSize: '0.875rem', color: '#64748b', lineHeight: 1.5 }}>
+                          <p style={{ margin: 0, fontSize: '0.875rem', color: '#94a3b8', lineHeight: 1.5 }}>
                             {meal.description}
                           </p>
                         )}
@@ -364,7 +364,7 @@ export const MessMenu = () => {
                     </div>
 
                     {/* Bottom CTA */}
-                    <div style={{ padding: '14px 20px', borderTop: '1px solid #f1f5f9', backgroundColor: '#fcfcfd' }}>
+                    <div style={{ padding: '14px 20px', borderTop: '1px solid #232630', backgroundColor: '#15171d' }}>
                       <Link
                         to={`/student/feedback?mealType=${meal.mealType}&date=${meal.date}`}
                         style={{
@@ -372,13 +372,14 @@ export const MessMenu = () => {
                           alignItems: 'center',
                           justifyContent: 'center',
                           gap: '6px',
-                          padding: '9px',
-                          borderRadius: '8px',
-                          backgroundColor: '#ea580c',
-                          color: '#ffffff',
+                          padding: '10px',
+                          borderRadius: '10px',
+                          backgroundColor: '#fef08a',
+                          color: '#0f1013',
                           fontWeight: '700',
-                          fontSize: '0.85rem',
+                          fontSize: '0.875rem',
                           textDecoration: 'none',
+                          boxShadow: '0 2px 8px rgba(254, 240, 138, 0.2)',
                         }}
                       >
                         <MessageSquarePlus size={16} />
@@ -409,29 +410,29 @@ export const MessMenu = () => {
                 <div
                   key={dayGroup.date}
                   style={{
-                    backgroundColor: '#ffffff',
+                    backgroundColor: '#181a20',
                     borderRadius: '16px',
-                    border: '1px solid #e2e8f0',
+                    border: '1px solid #262933',
                     overflow: 'hidden',
-                    boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
                   }}
                 >
                   {/* Day Banner */}
                   <div
                     style={{
                       padding: '14px 20px',
-                      backgroundColor: '#f8fafc',
-                      borderBottom: '1px solid #e2e8f0',
+                      backgroundColor: '#1c1f27',
+                      borderBottom: '1px solid #262933',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'space-between',
                     }}
                   >
                     <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                      <span style={{ fontSize: '1.1rem', fontWeight: '800', color: '#0f172a' }}>
+                      <span style={{ fontSize: '1.1rem', fontWeight: '800', color: '#f8fafc' }}>
                         {dayGroup.dayName}
                       </span>
-                      <span style={{ fontSize: '0.85rem', color: '#64748b' }}>
+                      <span style={{ fontSize: '0.85rem', color: '#94a3b8' }}>
                         ({dayGroup.date})
                       </span>
                     </div>
@@ -442,7 +443,6 @@ export const MessMenu = () => {
                     style={{
                       display: 'grid',
                       gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-                      divideColor: '#f1f5f9',
                     }}
                   >
                     {['Breakfast', 'Lunch', 'Snacks', 'Dinner'].map((type) => {
@@ -452,8 +452,8 @@ export const MessMenu = () => {
                           key={type}
                           style={{
                             padding: '18px 20px',
-                            borderRight: '1px solid #f1f5f9',
-                            borderBottom: '1px solid #f1f5f9',
+                            borderRight: '1px solid #232630',
+                            borderBottom: '1px solid #232630',
                           }}
                         >
                           <div style={{ marginBottom: '8px' }}>
@@ -463,7 +463,7 @@ export const MessMenu = () => {
                           </div>
                           {meal ? (
                             <>
-                              <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '0.875rem', color: '#334155' }}>
+                              <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '0.875rem', color: '#cbd5e1' }}>
                                 {meal.items.map((item, i) => (
                                   <li key={i} style={{ marginBottom: '4px' }}>
                                     {item}
@@ -474,8 +474,8 @@ export const MessMenu = () => {
                                 <Link
                                   to={`/student/feedback?mealType=${type}&date=${dayGroup.date}`}
                                   style={{
-                                    fontSize: '0.75rem',
-                                    color: '#ea580c',
+                                    fontSize: '0.78rem',
+                                    color: '#fef08a',
                                     fontWeight: '700',
                                     textDecoration: 'none',
                                   }}
@@ -485,7 +485,7 @@ export const MessMenu = () => {
                               </div>
                             </>
                           ) : (
-                            <span style={{ fontSize: '0.8rem', color: '#94a3b8', fontStyle: 'italic' }}>
+                            <span style={{ fontSize: '0.8rem', color: '#64748b', fontStyle: 'italic' }}>
                               Not specified
                             </span>
                           )}

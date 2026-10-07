@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { messService } from '../../services/api';
 import Logo from '../../components/common/Logo';
-import { Lock, Mail, ArrowRight, UtensilsCrossed } from 'lucide-react';
+import { Lock, Mail, ArrowRight, UtensilsCrossed, ChevronDown } from 'lucide-react';
 import Alert from '../../components/common/Alert';
 
 export const Login = () => {
@@ -77,38 +77,44 @@ export const Login = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: '32px 16px',
-        backgroundColor: '#f8fafc',
+        padding: '36px 16px',
+        backgroundColor: '#080d1a',
+        backgroundImage: 'radial-gradient(circle at 10% 25%, rgba(30, 58, 98, 0.45) 0%, transparent 45%), radial-gradient(circle at 90% 75%, rgba(22, 45, 78, 0.5) 0%, transparent 50%)',
+        position: 'relative',
+        overflow: 'hidden',
       }}
     >
       <div
         style={{
           width: '100%',
-          maxWidth: '460px',
-          backgroundColor: '#ffffff',
-          borderRadius: '20px',
-          boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02)',
-          border: '1px solid #e2e8f0',
-          padding: '36px 32px',
+          maxWidth: '470px',
+          backgroundColor: '#0f172a',
+          borderRadius: '24px',
+          boxShadow: '0 25px 60px -10px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(30, 41, 59, 0.9)',
+          border: '1px solid #1e293b',
+          padding: '38px 32px',
+          position: 'relative',
+          zIndex: 10,
         }}
       >
         {/* Brand Header */}
         <div style={{ textAlign: 'center', marginBottom: '24px' }}>
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '14px' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px' }}>
             <Logo size="lg" />
           </div>
           <h2
             style={{
               fontFamily: "'Outfit', sans-serif",
-              fontSize: '1.65rem',
+              fontSize: '1.75rem',
               fontWeight: '800',
-              color: '#0f172a',
+              color: '#f8fafc',
               margin: '0 0 6px 0',
+              letterSpacing: '-0.02em',
             }}
           >
             Welcome Back
           </h2>
-          <p style={{ color: '#64748b', fontSize: '0.9rem', margin: 0 }}>
+          <p style={{ color: '#94a3b8', fontSize: '0.9rem', margin: 0, fontWeight: '500' }}>
             Sign in to access your MessMate dining portal
           </p>
         </div>
@@ -123,8 +129,8 @@ export const Login = () => {
               style={{
                 display: 'block',
                 fontSize: '0.85rem',
-                fontWeight: '600',
-                color: '#334155',
+                fontWeight: '700',
+                color: '#f8fafc',
                 marginBottom: '6px',
               }}
             >
@@ -134,10 +140,10 @@ export const Login = () => {
               <div
                 style={{
                   position: 'absolute',
-                  left: '12px',
+                  left: '14px',
                   top: '50%',
                   transform: 'translateY(-50%)',
-                  color: '#ea580c',
+                  color: '#facc15',
                   display: 'flex',
                   pointerEvents: 'none',
                 }}
@@ -151,16 +157,28 @@ export const Login = () => {
                 disabled={loadingMesses}
                 style={{
                   width: '100%',
-                  padding: '11px 12px 11px 40px',
-                  borderRadius: '10px',
-                  border: '1px solid #cbd5e1',
+                  padding: '12px 38px 12px 42px',
+                  borderRadius: '12px',
+                  border: '1px solid #1e293b',
                   fontSize: '0.925rem',
                   outline: 'none',
-                  backgroundColor: '#ffffff',
+                  backgroundColor: '#0b1321',
                   boxSizing: 'border-box',
-                  color: '#0f172a',
-                  fontWeight: '500',
+                  color: '#f8fafc',
+                  fontWeight: '600',
                   cursor: 'pointer',
+                  appearance: 'none',
+                  WebkitAppearance: 'none',
+                  MozAppearance: 'none',
+                  transition: 'border-color 0.15s ease, box-shadow 0.15s ease',
+                }}
+                onFocus={(e) => {
+                  e.target.style.borderColor = '#facc15';
+                  e.target.style.boxShadow = '0 0 0 3px rgba(250, 204, 21, 0.15)';
+                }}
+                onBlur={(e) => {
+                  e.target.style.borderColor = '#1e293b';
+                  e.target.style.boxShadow = 'none';
                 }}
               >
                 {loadingMesses ? (
@@ -173,19 +191,33 @@ export const Login = () => {
                   ))
                 )}
               </select>
+              <div
+                style={{
+                  position: 'absolute',
+                  right: '14px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  color: '#94a3b8',
+                  display: 'flex',
+                  pointerEvents: 'none',
+                }}
+              >
+                <ChevronDown size={18} />
+              </div>
             </div>
-            <div style={{ fontSize: '0.75rem', color: '#64748b', marginTop: '4px' }}>
+            <div style={{ fontSize: '0.75rem', color: '#94a3b8', marginTop: '6px' }}>
               Both students and authorities must select their assigned mess.
             </div>
           </div>
 
+          {/* Email Address */}
           <div>
             <label
               style={{
                 display: 'block',
                 fontSize: '0.85rem',
-                fontWeight: '600',
-                color: '#334155',
+                fontWeight: '700',
+                color: '#f8fafc',
                 marginBottom: '6px',
               }}
             >
@@ -195,7 +227,7 @@ export const Login = () => {
               <div
                 style={{
                   position: 'absolute',
-                  left: '12px',
+                  left: '14px',
                   top: '50%',
                   transform: 'translateY(-50%)',
                   color: '#94a3b8',
@@ -212,27 +244,36 @@ export const Login = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 style={{
                   width: '100%',
-                  padding: '11px 12px 11px 40px',
-                  borderRadius: '10px',
-                  border: '1px solid #cbd5e1',
+                  padding: '12px 14px 12px 42px',
+                  borderRadius: '12px',
+                  border: '1px solid #1e293b',
+                  backgroundColor: '#0b1321',
+                  color: '#f8fafc',
                   fontSize: '0.95rem',
                   outline: 'none',
                   boxSizing: 'border-box',
-                  transition: 'border-color 0.15s ease',
+                  transition: 'border-color 0.15s ease, box-shadow 0.15s ease',
                 }}
-                onFocus={(e) => (e.target.style.borderColor = '#ea580c')}
-                onBlur={(e) => (e.target.style.borderColor = '#cbd5e1')}
+                onFocus={(e) => {
+                  e.target.style.borderColor = '#facc15';
+                  e.target.style.boxShadow = '0 0 0 3px rgba(250, 204, 21, 0.15)';
+                }}
+                onBlur={(e) => {
+                  e.target.style.borderColor = '#1e293b';
+                  e.target.style.boxShadow = 'none';
+                }}
               />
             </div>
           </div>
 
+          {/* Password */}
           <div>
             <label
               style={{
                 display: 'block',
                 fontSize: '0.85rem',
-                fontWeight: '600',
-                color: '#334155',
+                fontWeight: '700',
+                color: '#f8fafc',
                 marginBottom: '6px',
               }}
             >
@@ -242,7 +283,7 @@ export const Login = () => {
               <div
                 style={{
                   position: 'absolute',
-                  left: '12px',
+                  left: '14px',
                   top: '50%',
                   transform: 'translateY(-50%)',
                   color: '#94a3b8',
@@ -259,49 +300,62 @@ export const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 style={{
                   width: '100%',
-                  padding: '11px 12px 11px 40px',
-                  borderRadius: '10px',
-                  border: '1px solid #cbd5e1',
+                  padding: '12px 14px 12px 42px',
+                  borderRadius: '12px',
+                  border: '1px solid #1e293b',
+                  backgroundColor: '#0b1321',
+                  color: '#f8fafc',
                   fontSize: '0.95rem',
                   outline: 'none',
                   boxSizing: 'border-box',
-                  transition: 'border-color 0.15s ease',
+                  transition: 'border-color 0.15s ease, box-shadow 0.15s ease',
                 }}
-                onFocus={(e) => (e.target.style.borderColor = '#ea580c')}
-                onBlur={(e) => (e.target.style.borderColor = '#cbd5e1')}
+                onFocus={(e) => {
+                  e.target.style.borderColor = '#facc15';
+                  e.target.style.boxShadow = '0 0 0 3px rgba(250, 204, 21, 0.15)';
+                }}
+                onBlur={(e) => {
+                  e.target.style.borderColor = '#1e293b';
+                  e.target.style.boxShadow = 'none';
+                }}
               />
             </div>
           </div>
 
+          {/* Submit Button */}
           <button
             type="submit"
             disabled={submitting}
             style={{
-              marginTop: '6px',
-              backgroundColor: '#ea580c',
-              color: '#ffffff',
+              marginTop: '8px',
+              backgroundColor: '#facc15',
+              color: '#0f172a',
               border: 'none',
-              padding: '13px',
-              borderRadius: '10px',
+              padding: '14px',
+              borderRadius: '12px',
               fontSize: '1rem',
-              fontWeight: '700',
+              fontWeight: '800',
               cursor: submitting ? 'not-allowed' : 'pointer',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               gap: '8px',
-              boxShadow: '0 4px 6px -1px rgba(234, 88, 12, 0.3)',
+              boxShadow: '0 8px 24px rgba(250, 204, 21, 0.3)',
               opacity: submitting ? 0.7 : 1,
+              transition: 'transform 0.15s ease, filter 0.15s ease',
             }}
+            onMouseEnter={(e) => (e.currentTarget.style.filter = 'brightness(1.05)')}
+            onMouseLeave={(e) => (e.currentTarget.style.filter = 'none')}
           >
-            {submitting ? 'Authenticating...' : 'Sign In'}
-            {!submitting && <ArrowRight size={18} />}
+            <span>{submitting ? 'Authenticating...' : 'Sign In'}</span>
+            {!submitting && <ArrowRight size={18} strokeWidth={2.5} />}
           </button>
         </form>
 
-        <div style={{ marginTop: '24px', textAlign: 'center', fontSize: '0.875rem', color: '#64748b' }}>
+        {/* Footer Links */}
+        <div style={{ marginTop: '24px', textAlign: 'center', fontSize: '0.875rem', color: '#94a3b8' }}>
           Don't have an account?{' '}
-          <Link to="/register" style={{ color: '#ea580c', fontWeight: '700', textDecoration: 'none' }}>
+          <Link to="/register" style={{ color: '#facc15', fontWeight: '800', textDecoration: 'none' }}>
             Register as a Student
           </Link>
         </div>
@@ -310,14 +364,14 @@ export const Login = () => {
           style={{
             marginTop: '16px',
             paddingTop: '16px',
-            borderTop: '1px solid #f1f5f9',
+            borderTop: '1px solid #1e293b',
             textAlign: 'center',
             fontSize: '0.85rem',
-            color: '#64748b',
+            color: '#94a3b8',
           }}
         >
           Mess authority wanting to join?{' '}
-          <Link to="/register?tab=mess" style={{ color: '#0284c7', fontWeight: '700', textDecoration: 'none' }}>
+          <Link to="/register?tab=mess" style={{ color: '#facc15', fontWeight: '800', textDecoration: 'none' }}>
             Register a New Mess
           </Link>
         </div>
